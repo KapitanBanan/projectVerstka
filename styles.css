@@ -12,7 +12,54 @@
     padding: 1em;
     background-image: url('assets/images/back1.png');
     background-size: cover;
-    padding-top: 7em;
+}
+
+.main-page__header {
+    padding-bottom: 4em;
+    color: #FFFFFF;
+}
+
+.main-page__header__menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.main-page__header__menu div {
+    margin-left: 1rem;
+    margin-right: 6rem;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: 0.7em;
+}
+
+.main-page__header__menu img {
+    object-fit: contain;
+}
+
+.main-page__header__menu button img {
+    margin-right: 0.4rem;
+}
+
+.upperarrow {
+    margin-bottom: 0.2rem;
+}
+
+.main-page__header hr {
+    width: 100vh;
+    border-top: 1px solid #FFFFFF;
+    opacity: 0.2;
+}
+
+.main-page__header__menu button {
+    color: #3EC100;
+    background-image: none; 
+    background-color: transparent;
+    border-color: #3EC100;
+    height: 2.6rem;
+    border-radius: 1.3rem;
+    width: 6.5rem;
+    margin-right: 1rem;
 }
 
 .main-page__slider__content {
