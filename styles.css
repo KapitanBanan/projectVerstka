@@ -11,6 +11,17 @@
   margin-bottom: 0.2rem;
 }
 
+.brand-button {
+  width: 100%;
+  height: 3.4rem;
+  border-radius: 1.7rem;
+  border: none;
+  color: #FFFFFF;
+  font-size: 0.8em;
+  background-color: #3EC100;
+  box-shadow: 0 6px 15px rgba(61, 193, 0, 0.3);
+}
+
 .main-page {
   min-height: 100vh;
   padding: 1em;
@@ -36,6 +47,7 @@
   justify-content: flex-start;
 }
 .main-page__header__menu button {
+  margin-right: 1rem;
   color: #3EC100;
   background-image: none;
   background-color: transparent;
@@ -43,7 +55,6 @@
   height: 2.6rem;
   border-radius: 1.3rem;
   width: 6.5rem;
-  margin-right: 1rem;
 }
 .main-page__header__menu div {
   margin-left: 1rem;
@@ -155,21 +166,28 @@
   padding-top: 1em;
   padding-right: 1em;
   padding-bottom: 2.5em;
-  min-height: 135vh;
   background-color: #DCF9CD;
 }
 .main-page__slider__fourth h1 {
   padding-top: 1em;
   padding-bottom: 0.8em;
+  line-height: 1.5em;
+  font-size: 1.9em;
 }
 .main-page__slider__fourth div span {
   font-size: 0.8em;
   color: #797979;
-  margin-bottom: 2em;
+  margin-bottom: 2.3em;
+  display: block;
+  line-height: 1.5em;
 }
 .main-page__slider__fourth__content div {
   text-align: center;
   margin-bottom: 2.2em;
+}
+.main-page__slider__fourth .brand-button {
+  margin-bottom: 2em;
+  text-align: center;
 }
 
 /*# sourceMappingURL=styles.css.map */
