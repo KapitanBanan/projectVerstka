@@ -127,12 +127,15 @@
   padding-top: 1em;
   padding-right: 1em;
   padding-bottom: 2.5em;
-  min-height: 200vh;
   background-color: #317014;
-  /*background-color: rgba($color: #317014, $alpha: 0.95);*/
+  background-image: linear-gradient(rgba(34, 107, 0, 0.95), rgba(16, 49, 0, 0.95));
 }
-.main-page__slider__third div {
-  margin-bottom: 2em;
+.main-page__slider__third__content img {
+  border-radius: 50%;
+  box-shadow: 12px -2px #317014;
+}
+.main-page__slider__third__content > div {
+  margin-bottom: 3em;
   color: #FFFFFF;
 }
 .main-page__slider__third div span {
@@ -142,6 +145,7 @@
   padding-top: 1em;
   padding-bottom: 0.8em;
   color: #FFFFFF;
+  line-height: 1.5em;
 }
 .main-page__slider__third__iphone {
   text-align: center;

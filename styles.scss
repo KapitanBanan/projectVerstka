@@ -147,12 +147,16 @@ $stylest-color: #FFFFFF;
             padding-top: 1em;
             padding-right: 1em;
             padding-bottom: 2.5em;
-            min-height: 200vh;
             background-color: #317014;
-            /*background-color: rgba($color: #317014, $alpha: 0.95);*/
+            background-image: linear-gradient(rgb(34, 107, 0, 0.95), rgb(16, 49, 0, 0.95));
 
-            div {
-                margin-bottom: 2em;
+            &__content img {
+                border-radius:50%;
+                box-shadow: 12px -2px #317014;
+            }
+
+            &__content > div {
+                margin-bottom: 3em;
                 color: $stylest-color;
             }
 
@@ -164,6 +168,7 @@ $stylest-color: #FFFFFF;
                 padding-top: 1em;
                 padding-bottom: 0.8em;
                 color: $stylest-color;
+                line-height: 1.5em;
             }
 
             &__iphone {
