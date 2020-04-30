@@ -189,5 +189,95 @@
   margin-bottom: 2em;
   text-align: center;
 }
+.main-page__slider__sixth {
+  padding-left: 1em;
+  padding-top: 1em;
+  padding-right: 1em;
+  padding-bottom: 2.5em;
+  background-color: #DCF9CD;
+}
+.main-page__slider__sixth__content h2 {
+  padding-top: 1em;
+  padding-bottom: 0.8em;
+  line-height: 1.5em;
+  font-size: 25px;
+}
+.main-page__slider__sixth__content__cards__card {
+  width: 335.35px;
+  margin-bottom: 27px;
+  border-radius: 10px;
+}
+.main-page__slider__sixth__content__cards__card__header {
+  color: #FFFFFF;
+  background-color: #3EC100;
+  text-align: center;
+  padding-left: 1em;
+  padding-top: 0.4em;
+  padding-right: 1em;
+  padding-bottom: 1.2em;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.main-page__slider__sixth__content__cards__card__header.gray {
+  background-color: #525252;
+}
+.main-page__slider__sixth__content__cards__card__header h3 {
+  font-size: 25px;
+}
+.main-page__slider__sixth__content__cards__card__header span {
+  font-size: 12px;
+}
+.main-page__slider__sixth__content__cards__card__content {
+  background-color: #FFFFFF;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.main-page__slider__sixth__content__cards__card__content button {
+  width: 296px;
+  margin: 0 20px 24px;
+}
+.main-page__slider__sixth__content__cards__card__content button.gray {
+  background-color: #525252;
+}
+.main-page__slider__sixth__content__cards__card__content__lists {
+  min-height: 307px;
+}
+.main-page__slider__sixth__content__cards__card__content__firstlist div {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #797979;
+  height: 48.71px;
+}
+.main-page__slider__sixth__content__cards__card__content__firstlist div span {
+  padding-left: 18px;
+  padding-top: 18px;
+  padding-right: 18px;
+}
+.main-page__slider__sixth__content__cards__card__content__firstlist__value {
+  color: black;
+  font-weight: bold;
+}
+.main-page__slider__sixth__content__cards__card__content__firstlist div:nth-child(odd) {
+  background-color: #FFFFFF;
+}
+.main-page__slider__sixth__content__cards__card__content__firstlist div:nth-child(even) {
+  background-color: #F7F7F7;
+}
+.main-page__slider__sixth__content__cards__card__content__secondlist {
+  border-bottom: 1px solid #F3F3F3;
+  padding-top: 5px;
+  padding-bottom: 18px;
+}
+.main-page__slider__sixth__content__cards__card__content__secondlist div {
+  padding-left: 18px;
+  padding-right: 18px;
+  padding-top: 7px;
+  box-sizing: border-box;
+}
+.main-page__slider__sixth__content__cards__card__content__secondlist span {
+  font-size: 12px;
+  font-weight: bold;
+}
 
 /*# sourceMappingURL=styles.css.map */
