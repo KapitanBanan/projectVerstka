@@ -1,9 +1,22 @@
-$buttonborder-color: #3EC100; 
+$brand-color: #3EC100;
+$buttonborder-color: $brand-color; 
 $stylest-color: #FFFFFF;
 
 :root {
     font-family: 'Montserrat', Helvetica, sans-serif;
+}
+
+* {
     box-sizing: border-box;
+}
+
+a {
+    color: $brand-color;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
 }
 
 .hidden {
@@ -223,4 +236,84 @@ $stylest-color: #FFFFFF;
             }
         }
     }
+}
+
+.main-page__fifth {
+    background-image: linear-gradient(rgb(34, 107, 0, 0.95), rgb(16, 49, 0, 0.95));
+    height: 603px;
+    padding-top: 1em;
+    padding-bottom: 2.5em;
+
+    &__content {
+        padding-top: 2em;
+        position: relative;
+
+        h2 {
+            font-size: 1.5em;
+            color: white;
+            line-height: 1.6em;
+            padding-left: 1.5em;
+            padding-right: 1.5em;
+            width: 0;
+        }
+
+        &__news {
+            margin-top: 3.5em;
+            display: flex;
+            height: 350px;
+
+            &-element {
+                background-color: white;
+                width: 287px;
+                height: 300px;
+                border-radius: 10px;
+
+                &__img {
+                    width: 100%;
+                    height: 55%;
+                    background-color: gray;
+                    border-top-left-radius: 10px;
+                    border-top-right-radius: 10px;
+                }
+
+                &__content {
+                    height: 45%;
+                    padding-top: 0.5em;
+                    padding-left: 1em;
+                    padding-right: 1em;
+                    position: relative;
+
+                    h3 {
+                        margin: 0;
+                        font-size: 14px;
+                        margin-bottom: 50px;
+                    }
+
+                    span {
+                        font-size: 11px;
+                    }
+
+                    &__bottom {
+                        font-size: 12px;
+                        margin-top: 6px;
+                        border-top: 1px solid #DFDFDF;
+                        padding-top: 10px;
+                        display: flex;
+                        justify-content: space-between;
+
+                        div {
+
+                            i {
+                                color: $brand-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.swiper-pagination-bullet {
+    background-color: $brand-color;
 }
