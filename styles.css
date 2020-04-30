@@ -214,7 +214,7 @@ a:hover {
 }
 .main-page__slider__sixth__content__cards__card {
   width: 335.35px;
-  margin-bottom: 27px;
+  margin: 0 auto 27px;
   border-radius: 10px;
 }
 .main-page__slider__sixth__content__cards__card__header {
