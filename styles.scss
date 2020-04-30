@@ -1,0 +1,202 @@
+$buttonbord-color: #3EC100; 
+$stylest-color: #FFFFFF;
+
+:root {
+    font-family: 'Montserrat', Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+.hidden {
+    display: none;
+}
+
+.upperarrow {
+    margin-bottom: 0.2rem;
+}
+
+.main-page {
+    min-height: 100vh;
+    padding: 1em;
+    background-image: url('assets/images/back1.png');
+    background-size: cover;
+
+    &__header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        padding: 1em;
+        color: $stylest-color;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        
+        hr {
+            width: 100vh;
+            border-top: 1px solid $stylest-color;
+            opacity: 0.2;
+        }
+    
+        &__menu {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+
+            button {
+                color: $buttonbord-color;
+                background-image: none; 
+                background-color: transparent;
+                border: 1px solid $buttonbord-color;
+                height: 2.6rem;
+                border-radius: 1.3rem;
+                width: 6.5rem;
+                margin-right: 1rem;
+            }
+
+            div {
+                margin-left: 1rem;
+                margin-right: 6rem;
+                margin-top: auto;
+                margin-bottom: auto;
+                font-size: 0.7em;  
+            }
+
+            img {
+                object-fit: contain;
+            }
+
+            button img {
+                margin-right: 0.4rem;
+            }            
+        } 
+    }
+
+    &__slider {
+        margin-top: 8em;
+
+        &__content {
+            text-align: left;
+
+            h1 {
+                color: $stylest-color;
+                font-weight: 600;
+                font-size: 1.9em;
+                line-height: 1.5em;
+                margin-bottom: 0.7em;
+            }
+
+            hr {
+                width: 9.5em;
+                border: none;
+                border-top: 2px solid $buttonbord-color;
+                margin-bottom: 1.6em;
+                margin-left: 0;
+            }
+
+            span {
+                display: inline-block;
+                color: $stylest-color;
+                font-size: 0.9em;
+                line-height: 1.5em;
+                margin-bottom: 3.5em;
+            }
+
+            button {
+                width: 100%;
+                height: 3.4rem;
+                border-radius: 1.7rem;
+                border: none;
+                color: $stylest-color;
+                font-size: 0.8em;
+                background-color: $buttonbord-color;
+                box-shadow: 0 6px 15px rgba(61, 193, 0, 0.3);
+            }
+        }
+
+        &__second {
+            display: flex;
+            flex-direction: column;
+            padding-left: 1em;
+            padding-top: 1em;
+            padding-right: 1em;
+            padding-bottom: 2.5em;
+            min-height: 200vh;
+            background-color: #DCF9CD;
+
+            h1 {
+                padding-top: 1em;
+                padding-bottom: 0.8em;
+            }
+
+            &__content {
+                background-color: $stylest-color;
+                border-radius: 0.8rem;
+                box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+                margin-bottom: 2em;
+
+                div {
+                    padding: 1.9em;
+                }
+
+                div span {
+                    color: #797979;
+                    font-size: 0.8em;
+                }
+            }            
+        }
+
+        &__third {
+            padding-left: 1em;
+            padding-top: 1em;
+            padding-right: 1em;
+            padding-bottom: 2.5em;
+            min-height: 200vh;
+            background-color: #317014;
+            /*background-color: rgba($color: #317014, $alpha: 0.95);*/
+
+            div {
+                margin-bottom: 2em;
+                color: $stylest-color;
+            }
+
+            div span {
+                font-size: 0.8em;
+            }
+
+            h1 {
+                padding-top: 1em;
+                padding-bottom: 0.8em;
+                color: $stylest-color;
+            }
+
+            &__iphone {
+                text-align: center;
+            }
+        }
+
+        &__fourth {
+            padding-left: 1em;
+            padding-top: 1em;
+            padding-right: 1em;
+            padding-bottom: 2.5em;
+            min-height: 135vh;
+            background-color: #DCF9CD;
+
+            h1 {
+                padding-top: 1em;
+                padding-bottom: 0.8em;
+            }
+
+            div span {
+                font-size: 0.8em;
+                color: #797979;
+                margin-bottom: 2em;
+            }
+
+            &__content {
+
+                div {
+                    text-align: center;
+                    margin-bottom: 2.2em;
+                }
+            }
+        }
+    }
+}
