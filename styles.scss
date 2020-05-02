@@ -51,7 +51,7 @@ a {
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     transition: background-color 0.3s ease;
 
-    &.transparent {
+    &.solid {
         background-color: #103100;
     }
 
@@ -660,7 +660,7 @@ a {
     &__first {
         padding-left: 1.2em;
         padding-right: 1.2em;
-        background-image: url('assets/images/company-first/back.png');
+        background-image: url('assets/images/company-fisrt/back.png');
         background-size: cover;
         width: 100vw;
 

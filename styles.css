@@ -45,7 +45,7 @@ a:hover {
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   transition: background-color 0.3s ease;
 }
-.header.transparent {
+.header.solid {
   background-color: #103100;
 }
 .header__content {
@@ -533,7 +533,7 @@ a:hover {
 .company-page__first {
   padding-left: 1.2em;
   padding-right: 1.2em;
-  background-image: url("assets/images/company-first/back.png");
+  background-image: url("assets/images/company-fisrt/back.png");
   background-size: cover;
   width: 100vw;
 }
