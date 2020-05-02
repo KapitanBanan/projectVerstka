@@ -766,26 +766,40 @@ a {
             position: relative;
             top: 12em;
             margin: 0 auto;
+            padding-top: 10px;
 
             &__blocks {
                 display: flex;
                 flex-direction: row;
-                justify-content: flex-start;
+                justify-content: space-evenly;
             }
 
             &__element {
-                width: 40%;
-                padding: 10px;
+                width: 50%;
+                padding: 20px;
+                position: relative;
+
+                & + &:before {
+                    content: "";
+                    position: absolute;
+                    top: 25%;
+                    left: 0;
+                    width: 1px;
+                    height: 50%;
+                    border-left: 1px solid rgba($color: #3EC100, $alpha: 0.4);
+                }
 
                 h4 {
                     font-size: 12px;
                     color:#797979;
+                    margin-bottom: 10px;
                 }
 
                 h3 {
                     font-size: 25px;
-                    font-weight: bold;
+                    font-weight: 600;
                     color: #F41112;
+                    margin-bottom: 10px;
                 }
 
                 span {
@@ -832,13 +846,9 @@ a {
             }
 
             img {
-                padding: 0em;
+                margin-left: 1em;
+                width: 90%;
             }
-            // &__img {
-            //     background-image: url("E:/dev/projects/projectVerstka/assets/images/company-second/image.png");
-            //     background-position: center;
-            //     background-size: cover;
-            // }
 
             button {
                 width: 100%;
@@ -991,17 +1001,16 @@ a {
                 justify-content: flex-start;
 
                 &__tab {
-                    padding-top: 1em;
-                    padding-bottom: 1em;
-                    padding-right: 1.5em;
-                    padding-right: 1.5em;
-                    background-color: $stylest-color;
-                    border-top-left-radius: 15px;
-                    border-top-right-radius: 15px;
-                    
-                    h4 {
-                        font-size: 14px;
+                    padding: 1.2em 1.7em;
+                    border-top-left-radius: 10px;
+                    border-top-right-radius: 10px;
+                    font-size: 14px;
+                    color: #A9C19E;
+                    font-weight: bold;
+
+                    &.active {
                         color: #F41112;
+                        background-color: white;
                     }
                 }
             }
@@ -1014,6 +1023,11 @@ a {
                 border-bottom-right-radius: 15px;
 
                 &__element {
+                    display: none;
+
+                    &.active {
+                        display: block;
+                    }
 
                     h3 {
                         font-weight: 600;
@@ -1067,18 +1081,28 @@ a {
             }
 
             span {
-                display: inline-block;
-                font-size: 14px;
+                font-size: 12px;
                 line-height: 1.5em;
                 padding-bottom: 2.5em;
+                font-size: 14px;
             }
 
             &__list {
+                margin-top: 2em;
 
                 &__element {
                     display: flex;
                     flex-direction: row;
                     justify-content: flex-start;
+                    align-items: center;
+                    margin-bottom: 1em;
+
+                    span {
+                        font-size: 12px;
+                        line-height: 1.5em;
+                        padding-bottom: 0;
+                        margin-left: 1em;
+                    }
                 }
             }
         }
