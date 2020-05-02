@@ -1,9 +1,8 @@
-<svg width="75" height="79" viewBox="0 0 75 79" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g filter="url(#filter0_d)">
-<circle cx="35.5" cy="35.5" r="14.5" fill="white"/>
+<circle cx="17.5" cy="17.5" r="17.5" fill="white"/>
 </g>
-<path d="M29.6892 36.1603C28.7346 35.2111 30.178 33.7597 31.1324 34.7089L34.0622 37.6096L40.4389 31.2331C41.3934 30.2785 42.8447 31.7297 41.8901 32.6843L34.7914 39.779C34.3928 40.1778 33.7463 40.179 33.3462 39.781L29.6892 36.1603Z" fill="#525252"/>
-<defs>
+<path transform="translate(11.5,12)" d="M0.689211 6.16034C-0.265369 5.2111 1.17803 3.75969 2.13244 4.70892L5.06217 7.60958L11.4389 1.23307C12.3934 0.278488 13.8447 1.72974 12.8901 2.68432L5.79139 9.77903C5.39279 10.1778 4.74626 10.179 4.34615 9.78103L0.689211 6.16034Z" fill="#525252"/><defs>
 <filter id="filter0_d" x="-4" y="0" width="79" height="79" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
 <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
