@@ -714,52 +714,31 @@ a {
             border-radius: 15px;
             position: relative;
             top: 12em;
+            margin: 0 auto;
 
             &__blocks {
                 display: flex;
                 flex-direction: row;
                 justify-content: flex-start;
-
-                &__element {
-
-                    h4 {
-                        font-size: 12px;
-                        color:#797979;
-                    }
-
-                    h3 {
-                        font-size: 25px;
-                        font-weight: bold;
-                        color: #F41112;
-                    }
-
-                    span {
-                        font-size: 12px;
-                    }
-                }
             }
 
-            &__block {
-                display: flex;
-                flex-direction: row;
-                justify-content: center;
-                
-                &__element {
+            &__element {
+                width: 40%;
+                padding: 10px;
 
-                    h4 {
-                        font-size: 12px;
-                        color:#797979;
-                    }
+                h4 {
+                    font-size: 12px;
+                    color:#797979;
+                }
 
-                    h3 {
-                        font-size: 25px;
-                        font-weight: bold;
-                        color: #F41112;
-                    }
+                h3 {
+                    font-size: 25px;
+                    font-weight: bold;
+                    color: #F41112;
+                }
 
-                    span {
-                        font-size: 12px;
-                    }
+                span {
+                    font-size: 12px;
                 }
             }
         }
