@@ -36,6 +36,16 @@ a {
     font-size: 0.8em;
     background-color: $buttonborder-color;
     // box-shadow: 0 6px 15px rgba(61, 193, 0, 0.3);
+
+    &:hover {
+        background-color: $stylest-color;
+        color: $brand-color;
+        cursor: pointer;
+        border: 1px solid $brand-color;
+        // transform: translateY(-5px);
+        // transition: all 0.1s ease-in;
+        // transition: transform 0.2s ease-in;
+    }
 }
 
 .header {
