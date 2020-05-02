@@ -616,5 +616,51 @@ a:hover {
 .company-page__first__achievements__block__element span {
   font-size: 12px;
 }
+.company-page__second {
+  padding-top: 9em;
+  padding-left: 1.2em;
+  padding-right: 1.2em;
+  background-size: cover;
+  background-color: #DCF9CD;
+}
+.company-page__second__content {
+  text-align: left;
+  padding-top: 7.5em;
+  padding-bottom: 0em;
+}
+.company-page__second__content h2 {
+  font-weight: 600;
+  font-size: 25px;
+  font-weight: bold;
+  line-height: 1.5em;
+  margin-bottom: 0.7em;
+}
+.company-page__second__content hr {
+  width: 6em;
+  border: none;
+  border-top: 2px solid #3EC100;
+  margin-bottom: 1.6em;
+  margin-left: 0;
+}
+.company-page__second__content img {
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+}
+.company-page__second__content span {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 1.5em;
+  padding-bottom: 6em;
+}
+.company-page__second__content button {
+  width: 100%;
+  height: 3.4rem;
+  border-radius: 1.7rem;
+  border: none;
+  color: #FFFFFF;
+  font-size: 12px;
+  background-color: #3EC100;
+  box-shadow: 0 6px 15px rgba(61, 193, 0, 0.3);
+}
 
 /*# sourceMappingURL=styles.css.map */
