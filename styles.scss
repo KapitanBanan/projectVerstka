@@ -1260,3 +1260,36 @@ a {
         }
     }
 }
+
+.error-page {
+    
+    &__first {
+        background-color: $stylest-color;
+        padding: 8em 1.2em 0em 1.2em;
+
+        &__content {
+
+            h3 {
+                text-align: center;
+                font-size: 14px;
+                line-height: 19px;
+                padding-bottom: 2em;
+
+                b {
+                    font-weight: 600;
+                }
+            }
+
+            button {
+                width: 100%;
+                height: 3.4rem;
+                border-radius: 1.7rem;
+                border: none;
+                color: $stylest-color;
+                font-size: 12px;
+                background-color: $buttonborder-color;
+                box-shadow: 0 6px 15px rgba(61, 193, 0, 0.3);
+            }
+        }
+    }
+}
