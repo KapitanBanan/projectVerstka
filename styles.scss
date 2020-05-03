@@ -1123,7 +1123,7 @@ a {
 
     &__first {
         background-color: $stylest-color;
-        padding-top: 5em;
+        padding-top: 7.5em;
         padding-left: 1.2em;
         padding-right: 1.2em;
         background-size: cover;
@@ -1131,27 +1131,29 @@ a {
         &__content {
             //margin-top: 8em;
             text-align: left;
-            padding-bottom: 5em;
+            padding-bottom: 2em;
 
             h1 {
                 font-weight: 600;
-                font-size: 25px;
+                font-size: 30px;
                 font-weight: bold;
                 line-height: 1.5em;
-                margin-bottom: 0.7em;
+                margin-bottom: 0.5em;
             }
 
             hr {
                 width: 8em;
                 border: none;
                 border-top: 2px solid $buttonborder-color;
-                margin-bottom: 1.6em;
+                margin-bottom: 1.2em;
                 margin-left: 0;
             }
 
-            span {
+            h4 {
+                padding-bottom: 2em;
                 display: inline-block;
                 font-size: 14px;
+                font-weight: 400;
                 line-height: 1.5em;
                 padding-bottom: 2.5em;
             }
@@ -1166,6 +1168,26 @@ a {
                 background-color: $buttonborder-color;
                 box-shadow: 0 6px 15px rgba(61, 193, 0, 0.3);
             }
+
+            span {
+                padding-top: 1.3em;
+                padding-bottom: 2em;
+                display: inline-block;
+                font-size: 12px;
+                font-weight: 600;
+                line-height: 1.5em;
+            }
+        }
+    }
+
+    &__second {
+        
+        &__blocks {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+
+            
         }
     }
 }
