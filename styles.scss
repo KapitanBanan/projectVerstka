@@ -194,7 +194,7 @@ a {
         min-height: 100vh;
         padding-left: 1.2em;
         padding-right: 1.2em;
-        background-image: url('assets/images/back1.png');
+        background-image: url('assets/images/main/first/backmarket.png');
         background-size: cover;
 
         &__content {
@@ -758,7 +758,7 @@ a {
     &__first {
         padding-left: 1.2em;
         padding-right: 1.2em;
-        background-image: url('assets/images/company-fisrt/back.png');
+        background-image: url('assets/images/company/fisrt/back.png');
         background-size: cover;
         width: 100vw;
 
@@ -1204,6 +1204,16 @@ a {
                 font-size: 12px;
                 background-color: $buttonborder-color;
                 box-shadow: 0 6px 15px rgba(61, 193, 0, 0.3);
+
+                div {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+
+                    img {
+                        margin-right: 0.3em;
+                    }
+                }
             }
 
             span {
@@ -1218,13 +1228,35 @@ a {
     }
 
     &__second {
-        
+        background-color: #DCF9CD;
+        padding: 3em 1.2em 0em 1.2em;
+
         &__blocks {
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
             justify-content: flex-start;
 
-            
+            &__content {
+                padding-bottom: 3em;
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+
+                &__element {
+                    padding-right: 0.5em;
+
+                    h3 {
+                        font-size: 16px;
+                        font-weight: 600;
+                        padding-bottom: 0.5em;
+                    }
+
+                    span {
+                        font-size: 12px;
+                        font-weight: 500;
+                    }
+                }
+            }
         }
     }
 }
