@@ -8,10 +8,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
     <link rel="stylesheet" href="styles.css">
-    <title>Ошибка</title>
+    <title>Вход в личный кабинет</title>
 </head>
 <body>
-    <div class="header solid">
+    <div class="header" id="navbar">
         <div class="header__content">
             <div class="header__content__block">
                 <div>
@@ -39,20 +39,36 @@
                             <li><a href="support-page.html">Контакты</a></li>
                         </ul>
                         <button class="brand-button">Регистрация</button>
+
                     </div>
                 </div>
             </div>
+ 
         </div>
     </div>
-    <div class="error-page">
-        <div class="error-page__first">
-            <div class="error-page__first__content">
-                <img src="assets/images/error/errorback.png">
-                <h3><b>Ошибка! </b>Вернитесь на главную страницу или обратитесь в службу поддержки.</h3>
-                <button>Перейти на главную</button>
+    <div class="singin-page">
+        <div class="singin-page__first">
+            <div class="singin-page__first__content">
+                <h1>Вход в личный кабинет</h1>
+                <div class="singin-page__first__content__blocks">
+                    <div class="singin-page__first__content__blocks__element">
+                        <img src="assets/images/registration/mail.svg">
+                        <input type="text" placeholder="Введите ваш E-mail*"> 
+                    </div>
+                    <div class="singin-page__first__content__blocks__element">
+                        <img src="assets/images/registration/password.svg">
+                        <input type="text" placeholder="Введите пароль*">
+                        <img class="singin-page__first__content__blocks__element__eye" src="assets/images/registration/ward.svg">
+                    </div>
+                </div>
+                <button>Войти</button>
+                <div class="singin-page__first__content__choice">
+                    <a href="">Забыли пароль?</a>
+                    <a href="registration-page.html">Регистрация</a>
+                </div>
             </div>
         </div>
     </div>
 
     <script src="menu.js"></script>
-</body>    
+</body>
