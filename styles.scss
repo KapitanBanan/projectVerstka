@@ -1,4 +1,5 @@
 $brand-color: #3EC100;
+$dark-brand-color: #103100;
 $buttonborder-color: $brand-color; 
 $stylest-color: #FFFFFF;
 
@@ -63,8 +64,12 @@ a {
     transition: background-color 0.3s ease;
 
     &.solid {
-        background-color: #103100;
+        background-color: $dark-brand-color;
     }
+
+    &__language {
+        margin-left: 0.9em;
+    } 
 
     &__content {
         display: flex;
@@ -76,10 +81,6 @@ a {
             display: flex;
             flex-direction: row;
 
-            div+div {
-                margin-left: 0.9em;
-            }
-
             &__button button{
                 color: $buttonborder-color;
                 background-image: none; 
@@ -88,6 +89,7 @@ a {
                 height: 34px;
                 width: 104px;
                 border-radius: 1.3rem;
+                margin-right: 20px;
 
                 img {
                     margin-right: 4px;
@@ -101,52 +103,87 @@ a {
     }
 }
 
-.header-solid {
-    z-index: 9999;
-    position: fixed;
-    height: 61px;
-    width: 100%;
-    top: 0;
-    left: 0;
-    padding: 1em;
-    padding-top: 0.8em;
-    padding-bottom: 0.6em;
-    color: $stylest-color;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    transition: background-color 0.3s ease;
-    background-color: #103100;
+.menu {
+    width: 26px;
+    z-index: 1000;
+
+    & #overlay {
+        display: none;
+        background-color: rgba(10, 31, 0, 0.4);
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 70px;
+        left: 0;
+        z-index: 900;
+    }
+
+    &.opened #overlay {
+        display: block;
+    }
+
+    &__burger {
+        z-index: inherit;
+        display: flex;
+        width: 26px;
+        height: 20px;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        align-items: flex-start;
+
+        & div {
+            width: 100%;
+            height: 1px;
+            border-top: 2px solid white;
+            padding: 4px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .menu.opened & {
+            div:first-child {
+                transform: rotate(45deg) translateY(4px);
+            }
+
+            div:last-child {
+                transform: rotate(-45deg) translate(7px, -3px);
+            }
+        }
+    }
 
     &__content {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        justify-content: space-between;
+        z-index: inherit;
+        display: none;
+        position: fixed;
+        top: 61px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        background-color: $dark-brand-color;
+        transition: all 0.3s ease-in-out;
 
-        &__block{
-            display: flex;
-            flex-direction: row;
+        .menu.opened & {
+            display: block;
+        }
 
-            div+div {
-                margin-left: 0.9em;
-            }
+        & ul {
+            margin-bottom: 20px;
 
-            &__button button{
-                color: $buttonborder-color;
-                background-image: none; 
-                background-color: transparent;
-                border: 1px solid $buttonborder-color;
-                height: 34px;
-                width: 104px;
-                border-radius: 1.3rem;
-
-                img {
-                    margin-right: 4px;
+            & li {
+                font-size: 14px;
+                border-bottom: 1px solid #184304;
+        
+                a {
+                    display: inline-block;
+                    color: white;
+                    padding: 20px;
+                    width: 100%;
                 }
             }
+        }
 
-            &__centering {
-                margin-top: 10px;
-            }
+        & button {
+            width: 90%;
+            margin: 20px auto;
         }
     }
 }
