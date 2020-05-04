@@ -23,7 +23,7 @@
             </div>
             <div class="header__content__block">
                 <div class="header__content__block__button">
-                    <button><img src="assets/images/header/doorsingin.svg">Вход</button>
+                    <button onclick="location.href='signin-page.html'"><img src="assets/images/header/doorsignin.svg">Вход</button>
                 </div>
                 <div class="header__content__block__centering menu">
                     <div id="overlay"></div>
@@ -54,12 +54,57 @@
                     Благодаря прямому доступу к финансовым рынкам, гарантируется стабильность 
                     исполнения ордеров и высокая точность котировок
                 </h4>
-                <button>
+                <button onclick="location.href='#openmodal'">
                     <div>
                         <img src="assets/images/support/first/phone.svg">Запросить обратный звонок
                     </div>
                 </button>
-                <span>Запросите звонок и мы свяжемся с вами в ближайшее время.</span>
+                <div class="modal-background">
+                    <div class="modal-background__modalwindow">
+                        <img class="modal-background__modalwindow__close" src="assets/images/modalwindow/close.svg">
+                        <h2>Оставьте заявку</h2>
+                        <hr>
+                        <div class="modal-background__modalwindow__blocks">
+                            <div class="modal-background__modalwindow__blocks__element">
+                                <img src="assets/images/modalwindow/name.svg">
+                                <input type="text" placeholder="Имя*">
+                            </div>
+                            <div class="modal-background__modalwindow__blocks__errortext hidden">Это поле необходимо заполнить</div>
+                            <div class="modal-background__modalwindow__blocks__element error">
+                                <img src="assets/images/modalwindow/surname.svg">
+                                <input type="text" placeholder="Фамилия*"> 
+                            </div>
+                            <div class="modal-background__modalwindow__blocks__errortext">Это поле необходимо заполнить</div>
+                            <div class="modal-background__modalwindow__blocks__element">
+                                <img src="assets/images/modalwindow/phone.svg">
+                                <input type="text" placeholder="Ваш номер телефона*">
+                            </div>
+                            <div class="modal-background__modalwindow__blocks__errortext hidden">Это поле необходимо заполнить</div>
+                            <div class="modal-background__modalwindow__blocks__element">
+                                <img src="assets/images/modalwindow/mail.svg">
+                                <input type="text" placeholder="Ваш E-mail*">
+                            </div>
+                            <div class="modal-background__modalwindow__blocks__errortext hidden">Это поле необходимо заполнить</div>
+                            <div class="modal-background__modalwindow__blocks__element">
+                                <img src="assets/images/modalwindow/country.svg">
+                                <input type="text" placeholder="Страна*">
+                            </div>
+                            <div class="modal-background__modalwindow__blocks__errortext hidden">Это поле необходимо заполнить</div>
+                            <div class="modal-background__modalwindow__blocks__element">
+                                <img src="assets/images/modalwindow/language.svg">
+                                <input type="text" placeholder="Язык поддержки*">
+                            </div>
+                            <div class="modal-background__modalwindow__blocks__errortext hidden">Это поле необходимо заполнить</div>
+                            <div class="modal-background__modalwindow__blocks__element">
+                                <img src="assets/images/modalwindow/clock.svg">
+                                <input type="text" placeholder="Удобное время для звонка">
+                            </div>
+                        </div>
+                        <button>Отправить</button>
+                        <div class="modal-background__modalwindow__remark"><b>* </b>Поля необходимые для заполнения</div>
+                    </div>
+                </div>
+                <span class="">Запросите звонок и мы свяжемся с вами в ближайшее время.</span>
             </div>
         </div>
         <div class="support-page__second">

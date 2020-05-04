@@ -49,6 +49,16 @@ a {
     }
 }
 
+.custom-select {
+    position: relative;
+    font-family: Arial;
+
+    select {
+        display: none;
+    }
+}
+
+
 .header {
     z-index: 9999;
     position: fixed;
@@ -184,6 +194,116 @@ a {
         & button {
             width: 90%;
             margin: 20px auto;
+        }
+    }
+}
+
+.modal-background {
+    width: 100%;
+    height: calc(100% - 61px);
+    margin: 0; /* убираем отступы */
+    padding: 0; /* убираем отступы */
+    position: fixed; /* фиксируем положение */
+    top:61px; /* растягиваем блок по всему экрану */
+    left:0;
+    overflow: auto;
+    background: rgba(0,0,0,0.4); /* полупрозрачный цвет фона */
+    z-index:100; /* выводим фон поверх всех слоев на странице браузера */
+    display: block; /* Делаем невидимым */
+    // pointer-events: none; /* элемент невидим для событий мыши */
+    
+    &:target {
+        display: block;
+        pointer-events: auto;
+    }
+
+    &__modalwindow {
+        width: 355px;
+        margin: 6em auto;
+        padding: 1em;
+        background: #fff;
+        border-radius: 10px;
+        position: relative;
+        overflow: auto;
+        pointer-events: auto;
+
+        h2 {
+            padding-top: 2em ;
+            text-align: center;
+            font-size: 20px;
+            font-weight: 700; 
+        }
+
+        hr {
+            text-align: center;
+            justify-content: center;
+            width: 8em;
+            border: none;
+            border-top: 2px solid $buttonborder-color;
+            margin-bottom: 1.2em;
+            margin-top: 1em;
+        }
+
+        &__remark {
+            margin-top: 1em;
+            margin-bottom: 3.5em;
+            text-align: center;
+            font-size: 11px;
+            font-weight: 500;
+            color: #000000;
+
+            b {
+                color: #F41112;
+            }
+        }
+
+        &__close {
+            position: absolute;
+            right: 23px;
+            display: block;
+        }
+
+        &__blocks {
+            padding: 1em 0em 2em 0em;
+
+            &__errortext {
+                font-size: 11px;
+                color: #F41112;
+                padding-top: 0.5em;
+                padding-bottom: 0em;
+            }
+
+            &__element {
+                background-color: #DFDFDF;
+                height: 55px;
+                margin-top: 1em;
+                border-radius: 10px;
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                position: relative;
+
+                &.error {
+                    border: 1px solid #F41112;
+                }
+                
+                img {
+                    margin-left: 1em;
+                }
+
+                input {
+                    background-color: #DFDFDF;
+                    margin-left: 0.8em;
+                    border: none;
+                    outline: none;
+                }
+
+                &__eye {
+                    position: absolute;
+                    right: 20px;
+                    top: 22px;
+                }
+            }
         }
     }
 }
@@ -1353,6 +1473,10 @@ a {
                     justify-content: flex-start;
                     position: relative;
 
+                    &.error {
+                        background-color: 1px solid #F41112;
+                    }
+
                     img {
                         margin-left: 1em;
                     }
@@ -1410,7 +1534,7 @@ a {
     }
 }
 
-.singin-page {
+.signin-page {
 
     &__first {
         height: 758px;
@@ -1418,7 +1542,7 @@ a {
         padding-left: 1.2em;
         padding-right: 1.2em;
         padding-bottom: 4em;
-        background: url('assets/images/singin/backsingin.png');
+        background: url('assets/images/signin/backsignin.png');
         background-size: cover;
 
         &__content {
@@ -1444,6 +1568,10 @@ a {
                     flex-direction: row;
                     justify-content: flex-start;
                     position: relative;
+
+                    &.error {
+                        border: 1px solid #F41112;
+                    }
 
                     img {
                         margin-left: 1em;
