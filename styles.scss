@@ -35,6 +35,10 @@ a {
     display: none;
 }
 
+.desktop-visible {
+    display: none !important;
+}
+
 .upperarrow {
     margin-bottom: 0.2rem;
 }
@@ -96,7 +100,62 @@ a {
 }
 
 
+// .header {
+//     z-index: 9999;
+//     position: fixed;
+//     height: 61px;
+//     width: 100%;
+//     top: 0;
+//     left: 0;
+//     padding: 1em;
+//     padding-top: 0.8em;
+//     padding-bottom: 0.6em;
+//     color: $stylest-color;
+//     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+//     transition: background-color 0.3s ease;
+
+//     &.solid {
+//         background-color: $dark-brand-color;
+//     }
+
+//     &__language {
+//         margin-left: 0.9em;
+//     } 
+
+//     &__content {
+//         display: flex;
+//         flex-direction: row;
+//         justify-content: flex-start;
+//         justify-content: space-between;
+
+//         &__block{
+//             display: flex;
+//             flex-direction: row;
+
+//             &__button button{
+//                 color: $buttonborder-color;
+//                 background-image: none; 
+//                 background-color: transparent;
+//                 border: 1px solid $buttonborder-color;
+//                 height: 34px;
+//                 width: 104px;
+//                 border-radius: 1.3rem;
+//                 margin-right: 20px;
+
+//                 img {
+//                     margin-right: 4px;
+//                 }
+//             }
+
+//             &__centering {
+//                 margin-top: 10px;
+//             }
+//         }
+//     }
+// }
+
 .header {
+    display: grid;
     z-index: 9999;
     position: fixed;
     height: 61px;
@@ -110,12 +169,29 @@ a {
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     transition: background-color 0.3s ease;
 
+    @media screen and (min-width: $media-large) {
+        @include padding-x-large;
+        height: 95px;
+        padding-top: 30px;
+    }
+
     &.solid {
         background-color: $dark-brand-color;
     }
 
     &__language {
         margin-left: 0.9em;
+        padding-top: 10px;
+
+        @media screen and (min-width: $media-large) {
+            padding-top: 13px;
+            position: absolute;
+            right: 380px;
+        }
+
+        @media screen and (min-width: $media-extra-large) {
+            right: calc((100% - #{$max-width}) / 2 + 380px);
+        }    
     } 
 
     &__content {
@@ -128,7 +204,7 @@ a {
             display: flex;
             flex-direction: row;
 
-            &__button button{
+            &__button {
                 color: $buttonborder-color;
                 background-image: none; 
                 background-color: transparent;
@@ -138,8 +214,29 @@ a {
                 border-radius: 1.3rem;
                 margin-right: 20px;
 
+                @media screen and (min-width: $media-large) {
+                    border: none;
+                    height: 40px;
+                    
+                    &:hover{
+                        cursor: pointer;
+                    };
+                }
+
                 img {
                     margin-right: 4px;
+
+                    @media screen and (min-width: $media-large) {
+                        margin-right: 10px;
+                    }
+                }
+            }
+
+            > .brand-button {
+                height: 40px;
+
+                @media screen and (min-width: $media-large) {
+                    display: block !important;
                 }
             }
 
@@ -178,6 +275,10 @@ a {
         align-content: flex-start;
         align-items: flex-start;
 
+        @media screen and (min-width: $media-large) {
+            display: none;
+        }
+
         & div {
             width: 100%;
             height: 1px;
@@ -208,6 +309,18 @@ a {
         background-color: $dark-brand-color;
         transition: all 0.3s ease-in-out;
 
+
+        @media screen and (min-width: $media-large) {
+            display: inline-block;
+            position: absolute;
+            top: 0;
+            left: calc((100% - #{$max-width}) / 2 + 110px);
+            width: auto;
+            background-color: inherit;
+            bottom: 0;
+            height: 95px;
+        }
+
         .menu.opened & {
             display: block;
         }
@@ -215,15 +328,38 @@ a {
         & ul {
             margin-bottom: 20px;
 
+            @media screen and (min-width: $media-large) {
+                margin-bottom: 0;
+            }
+
             & li {
                 font-size: 14px;
                 border-bottom: 1px solid #184304;
+
+                @media screen and (min-width: $media-large) {
+                    display: inline-block;
+                    margin-bottom: 0;
+                    border-bottom: none;
+                }
         
                 a {
                     display: inline-block;
                     color: white;
                     padding: 20px;
                     width: 100%;
+                    text-decoration: none;
+
+                    @media screen and (min-width: $media-large) {
+                        padding-top: 40px;
+
+                        &:hover {
+                            cursor: pointer;
+                            color: #F41112;
+                            border-top: 3px solid #F41112;
+                            padding-top: 37px;
+                            height: 95px;
+                        }
+                    }
                 }
             }
         }
@@ -231,6 +367,11 @@ a {
         & button {
             width: 90%;
             margin: 20px auto;
+
+            @media screen and (min-width: $media-large) {
+                display: none;
+                margin-bottom: 0;
+            }
         }
     }
 }

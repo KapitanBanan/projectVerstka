@@ -11,20 +11,19 @@
     <title>Главная</title>
 </head>
 <body>
-    <div class="header" id="navbar">
+    <header class="header" id="navbar">
         <div class="header__content">
             <div class="header__content__block">
                 <div>
                     <a href="index.html"><img src="assets/images/header/logo.svg"></a>
                 </div>
-                <div class="header__content__block__centering header__language">
+                <div class="header__language">
                     <img src="assets/images/header/localization.svg">
                 </div>
             </div>
-            <div class="header__content__block">
-                <div class="header__content__block__button">
-                    <button onclick="location.href='signin-page.html'"><img src="assets/images/header/doorsignin.svg">Вход</button>
-                </div>
+            <nav class="header__content__block">
+                <button class="header__content__block__button" onclick="location.href='signin-page.html'"><img src="assets/images/header/doorsignin.svg">Вход</button>
+                <button class="brand-button desktop-visible" onclick="location.href='registration-page.html'">Регистрация</button>
                 <div class="header__content__block__centering menu">
                     <div id="overlay"></div>
                     <div class="menu__burger">
@@ -41,10 +40,9 @@
                         <button class="brand-button" onclick="location.href='registration-page.html'">Регистрация</button>
                     </div>
                 </div>
-            </div>
- 
+            </nav>
         </div>
-    </div>
+    </header>
     <div class="main-page">
         <div class="main-page__first screen">
             <div class="main-page__first__content main-page__first__content_1">
