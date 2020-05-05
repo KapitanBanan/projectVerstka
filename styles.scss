@@ -36,6 +36,10 @@ a {
     display: none;
 }
 
+.desktop-visible {
+    display: none !important;
+}
+
 .upperarrow {
     margin-bottom: 0.2rem;
 }
@@ -51,6 +55,13 @@ a {
     &.non-fixed {
         padding-left: inherit;
         padding-right: inherit;
+    }
+
+    &.screen-wide {
+        @media screen and (min-width: $media-extra-large) {
+            padding-left: calc((100% - #{1325px})/2);
+            padding-right: calc((100% - #{1325px})/2);
+        }
     }
 }
 
@@ -104,7 +115,62 @@ a {
 }
 
 
+// .header {
+//     z-index: 9999;
+//     position: fixed;
+//     height: 61px;
+//     width: 100%;
+//     top: 0;
+//     left: 0;
+//     padding: 1em;
+//     padding-top: 0.8em;
+//     padding-bottom: 0.6em;
+//     color: $stylest-color;
+//     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+//     transition: background-color 0.3s ease;
+
+//     &.solid {
+//         background-color: $dark-brand-color;
+//     }
+
+//     &__language {
+//         margin-left: 0.9em;
+//     } 
+
+//     &__content {
+//         display: flex;
+//         flex-direction: row;
+//         justify-content: flex-start;
+//         justify-content: space-between;
+
+//         &__block{
+//             display: flex;
+//             flex-direction: row;
+
+//             &__button button{
+//                 color: $buttonborder-color;
+//                 background-image: none; 
+//                 background-color: transparent;
+//                 border: 1px solid $buttonborder-color;
+//                 height: 34px;
+//                 width: 104px;
+//                 border-radius: 1.3rem;
+//                 margin-right: 20px;
+
+//                 img {
+//                     margin-right: 4px;
+//                 }
+//             }
+
+//             &__centering {
+//                 margin-top: 10px;
+//             }
+//         }
+//     }
+// }
+
 .header {
+    display: grid;
     z-index: 9999;
     position: fixed;
     height: 61px;
@@ -118,12 +184,29 @@ a {
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     transition: background-color 0.3s ease;
 
+    @media screen and (min-width: $media-large) {
+        @include padding-x-large;
+        height: 95px;
+        padding-top: 30px;
+    }
+
     &.solid {
         background-color: $dark-brand-color;
     }
 
     &__language {
         margin-left: 0.9em;
+        padding-top: 10px;
+
+        @media screen and (min-width: $media-large) {
+            padding-top: 13px;
+            position: absolute;
+            right: 380px;
+        }
+
+        @media screen and (min-width: $media-extra-large) {
+            right: calc((100% - #{$max-width}) / 2 + 380px);
+        }    
     } 
 
     &__content {
@@ -136,7 +219,7 @@ a {
             display: flex;
             flex-direction: row;
 
-            &__button button{
+            &__button {
                 color: $buttonborder-color;
                 background-image: none; 
                 background-color: transparent;
@@ -146,8 +229,29 @@ a {
                 border-radius: 1.3rem;
                 margin-right: 20px;
 
+                @media screen and (min-width: $media-large) {
+                    border: none;
+                    height: 40px;
+                    
+                    &:hover{
+                        cursor: pointer;
+                    };
+                }
+
                 img {
                     margin-right: 4px;
+
+                    @media screen and (min-width: $media-large) {
+                        margin-right: 10px;
+                    }
+                }
+            }
+
+            > .brand-button {
+                height: 40px;
+
+                @media screen and (min-width: $media-large) {
+                    display: block !important;
                 }
             }
 
@@ -186,6 +290,10 @@ a {
         align-content: flex-start;
         align-items: flex-start;
 
+        @media screen and (min-width: $media-large) {
+            display: none;
+        }
+
         & div {
             width: 100%;
             height: 1px;
@@ -216,6 +324,18 @@ a {
         background-color: $dark-brand-color;
         transition: all 0.3s ease-in-out;
 
+
+        @media screen and (min-width: $media-large) {
+            display: inline-block;
+            position: absolute;
+            top: 0;
+            left: calc((100% - #{$max-width}) / 2 + 110px);
+            width: auto;
+            background-color: inherit;
+            bottom: 0;
+            height: 95px;
+        }
+
         .menu.opened & {
             display: block;
         }
@@ -223,15 +343,38 @@ a {
         & ul {
             margin-bottom: 20px;
 
+            @media screen and (min-width: $media-large) {
+                margin-bottom: 0;
+            }
+
             & li {
                 font-size: 14px;
                 border-bottom: 1px solid #184304;
+
+                @media screen and (min-width: $media-large) {
+                    display: inline-block;
+                    margin-bottom: 0;
+                    border-bottom: none;
+                }
         
                 a {
                     display: inline-block;
                     color: white;
                     padding: 20px;
                     width: 100%;
+                    text-decoration: none;
+
+                    @media screen and (min-width: $media-large) {
+                        padding-top: 40px;
+
+                        &:hover {
+                            cursor: pointer;
+                            color: #F41112;
+                            border-top: 3px solid #F41112;
+                            padding-top: 37px;
+                            height: 95px;
+                        }
+                    }
                 }
             }
         }
@@ -239,6 +382,11 @@ a {
         & button {
             width: 90%;
             margin: 20px auto;
+
+            @media screen and (min-width: $media-large) {
+                display: none;
+                margin-bottom: 0;
+            }
         }
     }
 }
@@ -348,6 +496,34 @@ a {
                     top: 22px;
                 }
             }
+        }
+    }
+}
+
+.tabs {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+
+    .tab {
+        padding: 1.2em 1.7em;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        font-size: 14px;
+        color: #A9C19E;
+        font-weight: bold;
+
+        &.active {
+            color: #F41112;
+            background-color: white;
+        }
+
+        @media screen and (min-width: $media-extra-large) {
+            font-size: 16px;
+        }
+
+        &:hover {
+            cursor: pointer;
         }
     }
 }
@@ -641,6 +817,10 @@ a {
         height: 603px;
         padding-top: 2.6em;
         padding-bottom: 1em;
+
+        @media screen and (min-width: $media-extra-large) {
+            height: 100vh;
+        }
     
         &__content {
             padding-top: 2em;
@@ -655,7 +835,7 @@ a {
                 padding-right: 1.2em;
 
                 @media screen and (min-width: $media-extra-large) {
-                    @include padding-x-large();
+                    // @include padding-x-large();
                     font-size: 30px;
                 }
             }
@@ -664,12 +844,22 @@ a {
                 margin-top: 3.5em;
                 display: flex;
                 height: 350px;
+               
+                @media screen and (min-width: $media-extra-large) {
+                    width: 1200px;
+                    height: 420px;
+                }
     
                 &-element {
                     background-color: white;
                     width: 287px;
                     height: 300px;
                     border-radius: 10px;
+
+                    @media screen and (min-width: $media-extra-large) {
+                        width: 360px;
+                        height: 375px;
+                    }
     
                     &__img {
                         width: 100%;
@@ -689,11 +879,27 @@ a {
                         h3 {
                             margin: 0;
                             font-size: 14px;
-                            margin-bottom: 50px;
+                            height: 70px;
+
+                            @media screen and (min-width: $media-extra-large) {
+                                font-size: 16px;
+                                font-weight: 600;
+                                margin-top: 10px;
+                                height: 90px;
+                            }
+
+                            &:hover {
+                                cursor: pointer;
+                                color: $brand-color;
+                            }
                         }
     
                         span {
                             font-size: 11px;
+
+                            @media screen and (min-width: $media-extra-large) {
+                                font-size: 12px;
+                            }
                         }
     
                         &__bottom {
@@ -703,7 +909,15 @@ a {
                             padding-top: 10px;
                             display: flex;
                             justify-content: space-between;
-    
+
+                            @media screen and (min-width: $media-extra-large) {
+                                font-size: 14px;
+
+                                a {
+                                    font-weight: 500;
+                                }
+                            }
+
                             div {
     
                                 i {
@@ -854,9 +1068,27 @@ a {
 }
 
 
-.swiper-pagination-bullet {
-    background-color: $brand-color;
+.swiper {
+    &-pagination-bullet {
+        background-color: $brand-color;
+    }
+
+    &-button-prev, &-button-next {
+        display: none;
+        color: $brand-color;
+        height: 27px;
+        width: 14px;
+
+        @media screen and (min-width: $media-medium) {
+            display: inline-block;
+        }
+
+        &.swiper-button-disabled {
+            color: #C6C6C6;
+        }
+    }
 }
+
 
 .market-page{
 
@@ -1022,10 +1254,6 @@ a {
         }
 
         &__content {
-
-            div {
-                padding-bottom: 2em;
-            }
             
             &__title {
                 margin-bottom: 2em;
@@ -1069,6 +1297,15 @@ a {
                 }
             }
 
+            .tabs {
+                flex-wrap: wrap;
+
+                .tab {
+                    padding: 1em 1.3em;
+                    border-radius: 10px;
+                }
+            }
+
             &__otherinfo {
                 padding-top: 1.5em;
                 font-size: 12px;
@@ -1080,7 +1317,6 @@ a {
             }
 
             &__table {
-                height: 463px;
                 width: 100%;
                 background-color: $stylest-color;
                 border-radius: 10px;
@@ -1094,9 +1330,70 @@ a {
                     }
                 }
 
+                .tab-info {
+                    display: none;
 
+                    &.active {
+                        display: block;
+                    }
+                }
             }
         }
+    }
+}
+
+.table {
+    padding: 10px;
+
+    thead {
+        font-size: 13px;
+
+        th {
+            color: black;
+            text-align: left;
+            border-bottom: 1px solid #E3E3E3 !important;
+            font-weight: normal !important;
+        }
+    }
+
+    tbody {
+        font-size: 12px;
+
+        td {
+            color: #797979;
+            text-transform: uppercase;
+            padding-left: 17px !important;
+            padding-right: 0px !important;
+        }
+    }
+
+    .dataTables_scrollBody {
+        border-bottom: 0 !important;
+    }
+
+    .table.dataTable {
+        padding-bottom: 0 !important;
+    }
+
+    .dataTables_scrollBody {
+        // &::-webkit-scrollbar {
+        //   width: 5px !important;
+        // }
+      
+        // &::-webkit-scrollbar-thumb {
+        //   width: 5px !important;
+        //   background-color: #F41112 !important;
+        // }
+      
+        // &::-webkit-scrollbar-track {
+        //   background-color: #F6F6F6 !important;
+        //   width: 3px !important;
+        // }
+      
+        // &::-webkit-scrollbar-track-piece {
+        //   background-color: #F6F6F6 !important;
+        //   width: 3px !important;
+        // }
     }
 }
 
@@ -1511,30 +1808,6 @@ a {
 
                 @media screen and (min-width: $media-extra-large) {
                     font-size: 30px;
-                }
-            }
-
-            &__tabs {
-                display: flex;
-                flex-direction: row;
-                justify-content: flex-start;
-
-                &__tab {
-                    padding: 1.2em 1.7em;
-                    border-top-left-radius: 10px;
-                    border-top-right-radius: 10px;
-                    font-size: 14px;
-                    color: #A9C19E;
-                    font-weight: bold;
-
-                    @media screen and (min-width: $media-extra-large) {
-                        font-size: 16px;
-                    }
-
-                    &.active {
-                        color: #F41112;
-                        background-color: white;
-                    }
                 }
             }
 

@@ -11,20 +11,19 @@
     <title>Главная</title>
 </head>
 <body>
-    <div class="header" id="navbar">
+    <header class="header" id="navbar">
         <div class="header__content">
             <div class="header__content__block">
                 <div>
                     <a href="index.html"><img src="assets/images/header/logo.svg"></a>
                 </div>
-                <div class="header__content__block__centering header__language">
+                <div class="header__language">
                     <img src="assets/images/header/localization.svg">
                 </div>
             </div>
-            <div class="header__content__block">
-                <div class="header__content__block__button">
-                    <button onclick="location.href='signin-page.html'"><img src="assets/images/header/doorsignin.svg">Вход</button>
-                </div>
+            <nav class="header__content__block">
+                <button class="header__content__block__button" onclick="location.href='signin-page.html'"><img src="assets/images/header/doorsignin.svg">Вход</button>
+                <button class="brand-button desktop-visible" onclick="location.href='registration-page.html'">Регистрация</button>
                 <div class="header__content__block__centering menu">
                     <div id="overlay"></div>
                     <div class="menu__burger">
@@ -41,10 +40,9 @@
                         <button class="brand-button" onclick="location.href='registration-page.html'">Регистрация</button>
                     </div>
                 </div>
-            </div>
- 
+            </nav>
         </div>
-    </div>
+    </header>
     <div class="main-page">
         <div class="main-page__first screen">
             <div class="main-page__first__content main-page__first__content_1">
@@ -168,7 +166,7 @@
             </div> 
             <button class="brand-button">Начать торговать</button>
         </div>
-        <div class="main-page__fifth screen non-fixed">
+        <div class="main-page__fifth screen screen-wide">
             <div class="main-page__fifth__content">
                 <h2>Последние экономические новости</h2>
     
@@ -211,7 +209,75 @@
                         <div class="swiper-slide main-page__fifth__content__news-element">
                             <div class="main-page__fifth__content__news-element__img"></div>
                             <div class="main-page__fifth__content__news-element__content">
-                                <h3>Для компаний под мораторием 3</h3>
+                                <h3>Крупнейшие производители нефти договорились о снижении</h3>
+                                <span class="main-page__fifth__content__news-element__content__source">
+                                    <span>Источник: </span>
+                                    <a href="#">news.ru</a>
+                                </span>
+                                <div class="main-page__fifth__content__news-element__content__bottom">
+                                    <span>22.04.2020</span>
+                                    <div>
+                                        <a href="#">Подробнее</a>
+                                        <i>→</i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide main-page__fifth__content__news-element">
+                            <div class="main-page__fifth__content__news-element__img"></div>
+                            <div class="main-page__fifth__content__news-element__content">
+                                <h3>Для компаний под мораторием 4</h3>
+                                <span class="main-page__fifth__content__news-element__content__source">
+                                    <span>Источник: </span>
+                                    <a href="#">news.ru</a>
+                                </span>
+                                <div class="main-page__fifth__content__news-element__content__bottom">
+                                    <span>22.04.2020</span>
+                                    <div>
+                                        <a href="#">Подробнее</a>
+                                        <i>→</i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide main-page__fifth__content__news-element">
+                            <div class="main-page__fifth__content__news-element__img"></div>
+                            <div class="main-page__fifth__content__news-element__content">
+                                <h3>Для компаний под мораторием 5</h3>
+                                <span class="main-page__fifth__content__news-element__content__source">
+                                    <span>Источник: </span>
+                                    <a href="#">news.ru</a>
+                                </span>
+                                <div class="main-page__fifth__content__news-element__content__bottom">
+                                    <span>22.04.2020</span>
+                                    <div>
+                                        <a href="#">Подробнее</a>
+                                        <i>→</i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide main-page__fifth__content__news-element">
+                            <div class="main-page__fifth__content__news-element__img"></div>
+                            <div class="main-page__fifth__content__news-element__content">
+                                <h3>Для компаний под мораторием 6</h3>
+                                <span class="main-page__fifth__content__news-element__content__source">
+                                    <span>Источник: </span>
+                                    <a href="#">news.ru</a>
+                                </span>
+                                <div class="main-page__fifth__content__news-element__content__bottom">
+                                    <span>22.04.2020</span>
+                                    <div>
+                                        <a href="#">Подробнее</a>
+                                        <i>→</i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide main-page__fifth__content__news-element">
+                            <div class="main-page__fifth__content__news-element__img"></div>
+                            <div class="main-page__fifth__content__news-element__content">
+                                <h3>Для компаний под мораторием 7</h3>
                                 <span class="main-page__fifth__content__news-element__content__source">
                                     <span>Источник: </span>
                                     <a href="#">news.ru</a>
@@ -229,6 +295,9 @@
     
                     <div class="swiper-pagination"></div>
                 </div>
+
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
             </div>
         </div>
         <div class="main-page__sixth screen">
@@ -349,12 +418,26 @@
     <script>
         var swiper = new Swiper('.swiper-container', {
             slidesPerView: 'auto',
-            spaceBetween: 20,
-            centeredSlides: true,
             pagination: {
                 el: '.swiper-pagination',
                 clickable: true,
             },
+            centeredSlides: true,
+            spaceBetween: 20,
+            breakpoints: {
+                1024: {
+                    slidesPerView: 3,
+                    centeredSlides: false,
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                    },
+                    spaceBetween: 30,
+                    loopFillGroupWithBlank: true,
+                    slidesPerGroup: 3,
+                    centeredSlides: false,
+                }
+            }
         });
     </script>
 </body>
