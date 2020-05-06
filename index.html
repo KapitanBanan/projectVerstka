@@ -44,6 +44,7 @@
         </div>
     </header>
     <div class="main-page">
+<<<<<<< HEAD
         <div class="main-page__first screen">
             <div class="main-page__first__content main-page__first__content_1">
                 <h1>${1}</h1>
@@ -71,6 +72,42 @@
             </div>
             <div class="main-page__controller">
 
+=======
+        <div class="main-page__first">
+            <div class="banner-swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide main-page__first__content main-page__first__content_1">
+                        <h1>Delion — надежный проводник для трейдера, обеспечивающий прибыль</h1>
+                        <hr/>
+                        <span>Пользуйтесь услугами Delion,<br/> осуществляя торговлю на финансовых рынках.</span>
+                        <button class="brand-button">Начать торговать</button>
+                    </div>
+                    <div class="swiper-slide main-page__first__content main-page__first__content_2">
+                        <h1>Delion — надежность, проверенная временем</h1>
+                        <hr/>
+                        <span>Многочисленные отзывы клиентов подтверждают, что нам стоит доверять.</span>
+                        <button class="brand-button">Начать торговать</button>
+                    </div>
+                    <div class="swiper-slide main-page__first__content main-page__first__content_3">
+                        <h1>Воспользуйтесь всеми возможностями, торгуя на финансовых рынках с Delion</h1>
+                        <hr/>
+                        <span>CFD на акции, индексы, сырье, валюты, драгоценные металлы и другие<br/> финансовые инструменты доступны без ограничений.</span>
+                        <button class="brand-button">Начать торговать</button>
+                    </div>
+                    <div class="swiper-slide main-page__first__content main-page__first__content_4">
+                        <h1>Самые выгодные торговые условия</h1>
+                        <hr/>
+                        <span>Полное отсутствие реквот и проскальзываний для каждого клиента Delion.</span>
+                        <button class="brand-button">Начать торговать</button>
+                    </div>
+                </div>
+                <div class="main-page__first__controller">
+                    <span>Больше возможностей:</span>
+                    <div class="banner-swiper-button-prev swiper-button-prev"></div>
+                    <div class="banner-swiper-pagination"></div>
+                    <div class="banner-swiper-button-next swiper-button-next"></div>
+                </div>
+>>>>>>> b026c51f135946c1714fa8e77cebea13fe6edd23
             </div>
         </div>
         <div class="main-page__second screen">
@@ -439,6 +476,45 @@
                 }
             }
         });
+        var bannerSwiper = new Swiper('.banner-swiper-container', {
+            slidesPerView: 1,
+            speed: 400,
+            grabCursor: true,
+            loop: true,
+            pagination: {
+                el: '.banner-swiper-pagination',
+                type: 'bullets',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.banner-swiper-button-next',
+                prevEl: '.banner-swiper-button-prev',
+            },
+            // autoplay: {
+            //     delay: 5000,
+            // }
+        });
+        bannerSwiper.on('slideChange', function () {
+            var index = bannerSwiper.activeIndex % 4 + 1;
+            switch (index) {
+                case 1:
+                    document.querySelector('.main-page__first').style.backgroundImage = 'url(assets/images/main/first/back1.png';
+                    break;
+                case 2:
+                    document.querySelector('.main-page__first').style.backgroundImage = 'url(assets/images/main/first/back2.png';
+                    break;
+                case 3:
+                    document.querySelector('.main-page__first').style.backgroundImage = 'url(assets/images/main/first/back3.png';
+                    break;
+                case 4:
+                    document.querySelector('.main-page__first').style.backgroundImage = 'url(assets/images/main/first/back4.png';
+                    break;
+            }
+        });
     </script>
+    <img src="assets/images/main/first/back1.png" hidden/>
+    <img src="assets/images/main/first/back2.png" hidden/>
+    <img src="assets/images/main/first/back3.png" hidden/>
+    <img src="assets/images/main/first/back4.png" hidden/>
 </body>
 </html>
