@@ -52,7 +52,7 @@ async function run() {
                         return copy[id];
                     };
                 
-                    const newStr = line.replace(/\${(\d)}/, translater);
+                    const newStr = line.replace(/\${(\d+)}/g, translater);
 
                     this.output.write(`${newStr}\n`);
                   })
