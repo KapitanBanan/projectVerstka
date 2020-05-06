@@ -543,11 +543,51 @@ a {
         }
 
         &__controller {
+            left: 0;
+            right: 0;
             position: absolute;
-            bottom: 2em;
+            bottom: 0;
+            width: 100%;
+            height: 100px;
+            // position: absolute;
+            // bottom: -200px;
+            // width: 375px;
 
             @media screen and (min-width: $media-extra-large) {
                 @include padding-x-large();
+            }
+
+            > span {
+                display: none;
+                color: #BABABA;
+                font-size: 14px;
+
+                @media screen and (min-width: $media-extra-large) {
+                    display: inline-block;
+                }
+            }
+
+            .swiper-pagination-bullets {
+                display: inline-block;
+            }
+
+            .swiper-pagination-bullet {
+                width: 60px;
+                height: 60px;
+                border-radius: 30px;
+                background-color: white;
+                border: 8px solid #3EC100;
+                margin-left: 1em;
+            }
+
+            .banner-swiper-button-prev, .banner-swiper-button-next {
+                display: inline-block;
+                color: $brand-color;
+                left: unset;
+                right: unset;
+                top: unset;
+                bottom: unset;
+                position: relative;
             }
         }
     }
@@ -897,6 +937,27 @@ a {
                     }
                 }
             }
+
+            .swiper {
+                &-pagination-bullet {
+                    background-color: $brand-color;
+                }
+            
+                &-button-prev, &-button-next {
+                    display: none;
+                    color: $brand-color;
+                    height: 27px;
+                    width: 14px;
+            
+                    @media screen and (min-width: $media-medium) {
+                        display: inline-block;
+                    }
+            
+                    &.swiper-button-disabled {
+                        color: #C6C6C6;
+                    }
+                }
+            }
         }
     }
 
@@ -1035,29 +1096,6 @@ a {
         }
     }
 }
-
-
-.swiper {
-    &-pagination-bullet {
-        background-color: $brand-color;
-    }
-
-    &-button-prev, &-button-next {
-        display: none;
-        color: $brand-color;
-        height: 27px;
-        width: 14px;
-
-        @media screen and (min-width: $media-medium) {
-            display: inline-block;
-        }
-
-        &.swiper-button-disabled {
-            color: #C6C6C6;
-        }
-    }
-}
-
 
 .market-page{
 
