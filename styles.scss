@@ -1586,7 +1586,7 @@ a {
                 display: inline-block;
                 font-size: 14px;
                 line-height: 1.5em;
-                padding-bottom: 6em;
+                padding-bottom: 3em;
 
                 @media screen and (min-width: $media-extra-large) {
                     font-size: 16px;
@@ -1596,8 +1596,10 @@ a {
             }
 
             &__mobileimage {
-                left: auto;
-                right: 0;
+                display: block;
+                margin: 0 auto;
+                padding-bottom: 3em;
+
                 @media screen and (min-width: $media-extra-large) {
                     display: none;
                 }
@@ -1674,6 +1676,7 @@ a {
 
                     img {
                         padding-bottom: 0.7em;
+
                         @media screen and (min-width: $media-extra-large) {
                             margin-right: 1.5em;
                         }
@@ -1820,21 +1823,26 @@ a {
 
                 @media screen and (min-width: $media-extra-large) {
                     width: 1135px;
+                    padding-top: 2em;
+                    padding: 2em;
                 }
                 
 
                 &__element {
                     display: none;
 
-
-                    @media screen and (min-width: $media-extra-large) {
-                        flex-direction: row;
-                    }
-
                     &.active {
                         display: flex;
                         flex-direction: column;
                         justify-content: space-between;
+
+                        @media screen and (min-width: $media-extra-large) {
+                            flex-direction: row;
+
+                            div {
+                                padding-right: 3em;
+                            }
+                        }
                     }
 
                     h3 {
@@ -1846,6 +1854,7 @@ a {
 
                         @media screen and (min-width: $media-extra-large) {
                             font-size: 25px;
+                            padding-top: 2.2em;
                         }
                     }
         
@@ -1865,9 +1874,8 @@ a {
                     }
 
                     &__mobileimage {
-                        margin-left: 1em;
-                        left: auto;
-                        right: 0;
+                        display: block;
+                        margin: 0 auto;
         
                         @media screen and (min-width: $media-extra-large) {
                             display: none;
@@ -1880,8 +1888,8 @@ a {
                         background-size: cover;
         
                         @media screen and (min-width: $media-extra-large) {
-                            float: right;
                             display: block;
+                            margin: 0 auto;
                         }
                     }
                 }
@@ -1891,13 +1899,17 @@ a {
 
     &__sixth {
         padding-top: 5em;
+        padding-bottom: 3em;
         background-size: cover;
         background-color: #DCF9CD;
 
+        @media screen and (min-width: $media-extra-large) {
+            padding-top: 6.5em;
+            padding-bottom: 5em;
+        }
+
         &__content {
-            //margin-top: 8em;
             text-align: left;
-            padding-bottom: 3em;
 
             h2 {
                 font-weight: 600;
@@ -1905,6 +1917,10 @@ a {
                 font-weight: bold;
                 line-height: 1.5em;
                 margin-bottom: 0.7em;
+
+                @media screen and (min-width: $media-extra-large) {
+                    font-size: 30px;
+                }
             }
 
             span {
@@ -1912,10 +1928,19 @@ a {
                 line-height: 1.5em;
                 padding-bottom: 2.5em;
                 font-size: 14px;
+
+                @media screen and (min-width: $media-extra-large) {
+                    font-size: 16px;
+                }
             }
 
             &__list {
                 margin-top: 2em;
+
+                @media screen and (min-width: $media-extra-large) {
+                    font-size: 16px;
+                    margin-top: 3em;
+                }
 
                 &__element {
                     display: flex;
@@ -1929,6 +1954,10 @@ a {
                         line-height: 1.5em;
                         padding-bottom: 0;
                         margin-left: 1em;
+                        
+                        @media screen and (min-width: $media-extra-large) {
+                            font-size: 14px;
+                        }
                     }
                 }
             }
