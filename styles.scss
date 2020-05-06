@@ -118,61 +118,6 @@ a {
     }
 }
 
-
-// .header {
-//     z-index: 9999;
-//     position: fixed;
-//     height: 61px;
-//     width: 100%;
-//     top: 0;
-//     left: 0;
-//     padding: 1em;
-//     padding-top: 0.8em;
-//     padding-bottom: 0.6em;
-//     color: $stylest-color;
-//     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-//     transition: background-color 0.3s ease;
-
-//     &.solid {
-//         background-color: $dark-brand-color;
-//     }
-
-//     &__language {
-//         margin-left: 0.9em;
-//     } 
-
-//     &__content {
-//         display: flex;
-//         flex-direction: row;
-//         justify-content: flex-start;
-//         justify-content: space-between;
-
-//         &__block{
-//             display: flex;
-//             flex-direction: row;
-
-//             &__button button{
-//                 color: $buttonborder-color;
-//                 background-image: none; 
-//                 background-color: transparent;
-//                 border: 1px solid $buttonborder-color;
-//                 height: 34px;
-//                 width: 104px;
-//                 border-radius: 1.3rem;
-//                 margin-right: 20px;
-
-//                 img {
-//                     margin-right: 4px;
-//                 }
-//             }
-
-//             &__centering {
-//                 margin-top: 10px;
-//             }
-//         }
-//     }
-// }
-
 .header {
     display: grid;
     z-index: 9999;
@@ -194,7 +139,7 @@ a {
         padding-top: 30px;
     }
 
-    &.solid {
+    &.solid, &.solid-fixed {
         background-color: $dark-brand-color;
     }
 
