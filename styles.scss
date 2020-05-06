@@ -408,7 +408,7 @@ a {
     overflow: auto;
     background: rgba(0,0,0,0.4); /* полупрозрачный цвет фона */
     z-index:100; /* выводим фон поверх всех слоев на странице браузера */
-    display: block; /* Делаем невидимым */
+    display: none; /* Делаем невидимым */
     // pointer-events: none; /* элемент невидим для событий мыши */
     
     &:target {
@@ -2092,6 +2092,13 @@ a {
         background-color: $stylest-color;
         padding: 8em 1.2em 0em 1.2em;
 
+        @media screen and (min-width: $media-extra-large) {
+            padding-left: calc((100% - #{542px})/2);
+            padding-right: calc((100% - #{542px})/2);
+            margin-top: 3em;
+            padding-bottom: 10em;
+        }
+
         &__content {
 
             h3 {
@@ -2099,20 +2106,45 @@ a {
                 font-size: 14px;
                 padding-bottom: 2em;
 
+                @media screen and (min-width: $media-extra-large) {
+                    margin-top: 2em;
+                    font-size: 16px;
+                }
+
                 b {
                     font-weight: 600;
                 }
             }
 
+            &__mobileimage {
+                display: block;
+                margin: 0 auto;
+
+                @media screen and (min-width: $media-extra-large) {
+                    display: none;
+                }
+
+            }
+
+            &__desktopimage {
+                display: none;
+                background-size: cover;
+
+                @media screen and (min-width: $media-extra-large) {
+                    display: block;
+                    margin: 0 auto;
+                    display: block;
+                }
+            }
+
             button {
-                width: 100%;
-                height: 3.4rem;
-                border-radius: 1.7rem;
-                border: none;
-                color: $stylest-color;
-                font-size: 12px;
-                background-color: $buttonborder-color;
-                box-shadow: 0 6px 15px rgba(61, 193, 0, 0.3);
+                display: block;
+                margin: 0 auto;
+
+                @media screen and (min-width: $media-medium) {
+                    width: 263px;
+                    font-size: 14px;
+                }
             }
         }
     }
