@@ -41,25 +41,31 @@ id,Позиция,Готовый текст
 4.1.7. Информация об аккаунтах.,,
 41,Аккаунт №1,Silver
 42,Подзаголовок для аккаунта №1,"Optimale Handelsbedingungen für diejenigen, die versuchen, sich in die Rolle des Händlers"
-43,Возможности аккаунта №1,"- Minimale Einzahlung: $100;
-- Leverage: 1:20;
-- Sofortige Ausführung;"
+43,Возможности аккаунта №1,Minimale Einzahlung
+431,,$100
+432,,Leverage
+433,,1:20
+434,,Sofortige Ausführung
 44,Аккаунт №2,Gold
 45,Подзаголовок для аккаунта №2,Einzigartige Möglichkeiten für erfahrene Teilnehmer der Finanzmärkte
-46,Возможности аккаунта №2,"- Mindesteinzahlung: $1 000;
-- Hebel: 1:500;
-- Sofortige Ausführung;
-- Handel криптовалютами;
-- Einlagensicherung;"
+46,Возможности аккаунта №2,Mindesteinzahlung
+461,,$1 000
+462,,Hebel
+463,,1:500
+464,,Sofortige Ausführung
+465,,Handel криптовалютами
+466,,Einlagensicherung
 47,Аккаунт №3,Platinum
 48,Подзаголовок для аккаунта №3,"Einen besonderen Status, eröffnen sich neue Privilegien für Händler mit Erfahrung"
-49,Возможности аккаунта №3,"- Mindesteinzahlung: $10 000;
-- Hebel: 1:500;
-- Sofortige Ausführung;
-- Handel криптовалютами;
-- Einlagensicherung;
-- Schutz der Einlagen;
-- Rund um die Uhr persönliche Unterstützung;"
+49,Возможности аккаунта №3,Mindesteinzahlung
+491,,$10 000
+492,,Hebel
+493,,1:500
+494,,Sofortige Ausführung
+495,,Handel криптовалютами
+496,,Einlagensicherung
+497,,Schutz der Einlagen
+498,,Rund um die Uhr persönliche Unterstützung
 4.1.8. Футер,,
 50,Блок №1,"Der CFD-Handel ist professionellen Werkzeuge, die in sich ein hohes Risiko der schnellen Verlust von Geld wegen der Hebelwirkung. Eine bestimmte Anzahl von Konten der Privatanleger Verluste aus dem Handel mit CFDs mit diesem Anbieter. Sollten Sie genau sicher sein, dass Sie den Mechanismus des CFD-Handels. Mit allen möglichen Risiken finden Sie im Mitgliederbereich der Plattform."
 51,Блок №2,"Delion Unternehmen registriert in Kanada unter der Adresse: 500 Kingston Rd Toronto ON M4L 1V3, Toronto, Canada.

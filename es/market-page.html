@@ -1,0 +1,2300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.20/sc-2.0.1/datatables.min.css"/>
+    <link rel="stylesheet" href="../styles.css">
+    <title>Рынки</title>
+</head>
+<body>
+    <header class="header" id="navbar">
+        <div class="header__content">
+            <div class="header__content__block">
+                <div>
+                    <a href="index.html"><img src="../assets/images/header/logo.svg"></a>
+                </div>
+                <div class="header__language">
+                    <img src="../assets/images/header/localization.svg">
+                </div>
+            </div>
+            <nav class="header__content__block">
+                <button class="header__content__block__button" onclick="location.href='signin-page.html'"><img src="../assets/images/header/doorsignin.svg">Вход</button>
+                <button class="brand-button desktop-visible" onclick="location.href='registration-page.html'">Регистрация</button>
+                <div class="header__content__block__centering menu">
+                    <div id="overlay"></div>
+                    <div class="menu__burger">
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="menu__content">
+                        <ul>
+                            <li><a href="index.html">Главная</a></li>
+                            <li><a href="market-page.html">Рынки</a></li>
+                            <li><a href="company-page.html">О компании</a></li>
+                            <li><a href="support-page.html">Контакты</a></li>
+                        </ul>
+                        <button class="brand-button" onclick="location.href='registration-page.html'">Регистрация</button>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <div class="market-page">
+        <div class="market-page__first screen">
+            <div class="market-page__first__content">
+                <h1>Delion открывает доступ к межбанковской ликвидности</h1>
+                <hr/>
+                <span>
+                    Благодаря прямому доступу к финансовым рынкам, гарантируется стабильность исполнения ордеров и 
+                    высокая точность котировок.
+                </span>
+                <button class="brand-button">Открыть счет</button>
+            </div>
+        </div>
+        <div class="market-page__second screen">
+            <div class="market-page__second__content">
+                <h2>Ofrecemos pareja infinitamente operar en los mercados financieros</h2>
+                <div class="market-page__second__content__blocks">
+                    <div class="market-page__second__content__blocks__block">
+                        <img src="../assets/images/market/second/first.png">
+                        <div class="market-page__second__content__blocks__block__information">
+                            <h3>Los pares de divisas</h3>
+                            <span>
+                                El mercado más líquido, proporciona la oportunidad de obtener ganancias en el cambio de divisas
+                            </span>
+                        </div>
+                    </div>
+                    <div class="market-page__second__content__blocks__block">
+                        <img src="../assets/images/market/second/second.png">
+                        <div class="market-page__second__content__blocks__block__information">
+                            <h3>Криптовалюта</h3>
+                            <span>
+                                Открытие новых возможностей, торгуя такими волантильными валютами, как Bitcoin, Ethereum, Litecoin, Ripple.
+                            </span>
+                        </div>
+                    </div>
+                    <div class="market-page__second__content__blocks__block">
+                        <img src="../assets/images/market/second/third.png">
+                        <div class="market-page__second__content__blocks__block__information">
+                            <h3>CFD на акции</h3>
+                            <span>Применяя личный опыт, осуществляйте торги акциями ведущих компаний.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="market-page__third screen">
+            <div class="market-page__third__content">
+                <div class="market-page__third__content__title">
+                    <h2>Наличие более 120 финансовых инструментов для трейдинга</h2>
+                    <span>
+                        <b>Трейдеры могут торговать разными категориями активов:</b>  <kbd>Enter</kbd>
+                        криптовалютой, валютными парами, ценными металлами и бумагами.
+                    </span>
+                </div>
+                <div class="tabs">
+                    <div data-id="index" class="tab active">Index</div>
+                    <div data-id="crypto" class="tab">Crypto</div>
+                    <div data-id="forex" class="tab">Forex</div>
+                    <div data-id="metals" class="tab">Metals</div>
+                    <div data-id="stocks" class="tab">Stocks</div>
+                    <div data-id="commodities" class="tab">Commodities</div>
+                    <div data-id="etf" class="tab">ETF’s</div>
+                </div>
+                <div class="market-page__third__content__table table">
+                        <div data-id="index" class="tab-info active">
+                            <div class="table-wrap">
+                                <table>
+                                    <thead>
+                                    <tr>
+                                        <th>Заголовок</th>
+                                        <th>Инструмент</th>
+                                        <th>Мин. изменение цены</th>
+                                        <th>Мин. размер лота</th>
+                                        <th>Макс. размер лота</th>
+                                        <th>Макс. плечо</th>
+                                        <th>Количество контрактов на 1 лот</th>
+                                        <th>Открытие*</th>
+                                        <th>Закрытие*</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>cac40</td>
+                                        <td>cac40</td>
+                                        <td>0.01</td>
+                                        <td>1</td>
+                                        <td>10000</td>
+                                        <td>1 : 100</td>
+                                        <td>1</td>
+                                        <td>6:15</td>
+                                        <td>19:45</td>
+                                    </tr>
+                                    <tr>
+                                        <td>dax30</td>
+                                        <td>dax30</td>
+                                        <td>0.01</td>
+                                        <td>1</td>
+                                        <td>10000</td>
+                                        <td>1 : 100</td>
+                                        <td>1</td>
+                                        <td>6:15</td>
+                                        <td>19:45</td>
+                                    </tr>
+                                    <tr>
+                                        <td>dow jones</td>
+                                        <td>dji30</td>
+                                        <td>0.1</td>
+                                        <td>1</td>
+                                        <td>10000</td>
+                                        <td>1 : 100</td>
+                                        <td>1</td>
+                                        <td>22:45</td>
+                                        <td>20:45</td>
+                                    </tr>
+                                    <tr>
+                                        <td>ftse100</td>
+                                        <td>ftse100</td>
+                                        <td>0.01</td>
+                                        <td>1</td>
+                                        <td>10000</td>
+                                        <td>1 : 100</td>
+                                        <td>1</td>
+                                        <td>6:15</td>
+                                        <td>19:45</td>
+                                    </tr>
+                                    <tr>
+                                        <td>micex</td>
+                                        <td>mcx</td>
+                                        <td>0.001</td>
+                                        <td>1</td>
+                                        <td>10000</td>
+                                        <td>1 : 100</td>
+                                        <td>1</td>
+                                        <td>7:15</td>
+                                        <td>14:15</td>
+                                    </tr>
+                                    <tr>
+                                        <td>nasdaq 100</td>
+                                        <td>ndx100</td>
+                                        <td>0.1</td>
+                                        <td>1</td>
+                                        <td>10000</td>
+                                        <td>1 : 100</td>
+                                        <td>1</td>
+                                        <td>22:45</td>
+                                        <td>20:45</td>
+                                    </tr>
+                                    <tr>
+                                        <td>nikkei 225</td>
+                                        <td>nky225</td>
+                                        <td>0.01</td>
+                                        <td>1</td>
+                                        <td>10000</td>
+                                        <td>1 : 100</td>
+                                        <td>1</td>
+                                        <td>22:15</td>
+                                        <td>18:45</td>
+                                    </tr>
+                                    <tr>
+                                        <td>rts</td>
+                                        <td>rts</td>
+                                        <td>0.001</td>
+                                        <td>1</td>
+                                        <td>10000</td>
+                                        <td>1 : 100</td>
+                                        <td>1</td>
+                                        <td>7:15</td>
+                                        <td>14:15</td>
+                                    </tr>
+                                    <tr>
+                                        <td>s&amp;p 500</td>
+                                        <td>spx500</td>
+                                        <td>0.1</td>
+                                        <td>1</td>
+                                        <td>10000</td>
+                                        <td>1 : 100</td>
+                                        <td>1</td>
+                                        <td>22:45</td>
+                                        <td>20:45</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div data-id="crypto" class="tab-info">
+                            <div class="table-wrap">
+                                <table>
+                                    <thead>
+                                    <tr>
+                                        <th>Инструмент</th>
+                                        <th>Мин. изменение цены</th>
+                                        <th>Стандартный лот</th>
+                                        <th>Мин. размер лота</th>
+                                        <th>Макс. размер лота</th>
+                                        <th>Макс. плечо</th>
+                                        <th>Открытие*</th>
+                                        <th>Закрытие*</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>bch/usd</td>
+                                        <td>0.0001</td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td>100</td>
+                                        <td>1:2</td>
+                                        <td>0:05</td>
+                                        <td>23:45</td>
+                                    </tr>
+                                    <tr>
+                                        <td>btc/usd</td>
+                                        <td>0.01</td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td>100</td>
+                                        <td>1:2</td>
+                                        <td>0:05</td>
+                                        <td>23:45</td>
+                                    </tr>
+                                    <tr>
+                                        <td>eth/usd</td>
+                                        <td>0.00001</td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td>100</td>
+                                        <td>1:1</td>
+                                        <td>0:05</td>
+                                        <td>23:45</td>
+                                    </tr>
+                                    <tr>
+                                        <td>ltc/usd</td>
+                                        <td>0.01</td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td>100</td>
+                                        <td>1:1</td>
+                                        <td>0:05</td>
+                                        <td>23:45</td>
+                                    </tr>
+                                    <tr>
+                                        <td>xmr/usd</td>
+                                        <td>0.00001</td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td>100</td>
+                                        <td>1:1</td>
+                                        <td>0:05</td>
+                                        <td>23:45</td>
+                                    </tr>
+                                    <tr>
+                                        <td>xrp/usd</td>
+                                        <td>0.00001</td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td>100</td>
+                                        <td>1:1</td>
+                                        <td>0:05</td>
+                                        <td>23:45</td>
+                                    </tr>
+                                    <tr>
+                                        <td>zec/usd</td>
+                                        <td>0.00001</td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td>100</td>
+                                        <td>1:1</td>
+                                        <td>0:05</td>
+                                        <td>23:45</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div data-id="forex" class="tab-info">
+                            <div class="table-wrap">
+                                <table>
+                                    <thead>
+                                    <tr>
+                                        <th>Инструмент</th>
+                                        <th>Мин. изменение цены</th>
+                                        <th>Стандартный лот</th>
+                                        <th>Мин. размер лота</th>
+                                        <th>Макс. размер лота</th>
+                                        <th>Шаг изменения объема в лотах</th>
+                                        <th>Макс. плечо</th>
+                                        <th>Открытие*</th>
+                                        <th>Закрытие*</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>aud/cad</td>
+                                        <td>0.00001</td>
+                                        <td>100000</td>
+                                        <td>0.01</td>
+                                        <td>1000</td>
+                                        <td>0.01</td>
+                                        <td>1 : 500</td>
+                                        <td>21:15</td>
+                                        <td>20:45</td>
+                                    </tr>
+                                    <tr>
+                                        <td>aud/chf</td>
+                                        <td>0.00001</td>
+                                        <td>100000</td>
+                                        <td>0.01</td>
+                                        <td>1000</td>
+                                        <td>0.01</td>
+                                        <td>1 : 500</td>
+                                        <td>21:15</td>
+                                        <td>20:45</td>
+                                    </tr>
+                                    <tr>
+                                        <td>aud/jpy</td>
+                                        <td>0.001</td>
+                                        <td>100000</td>
+                                        <td>0.01</td>
+                                        <td>1000</td>
+                                        <td>0.01</td>
+                                        <td>1 : 500</td>
+                                        <td>21:15</td>
+                                        <td>20:45</td>
+                                    </tr>
+                                    <tr>
+                                        <td>aud/nzd</td>
+                                        <td>0.00001</td>
+                                        <td>100000</td>
+                                        <td>0.01</td>
+                                        <td>1000</td>
+                                        <td>0.01</td>
+                                        <td>1 : 500</td>
+                                        <td>21:15</td>
+                                        <td>20:45</td>
+                                    </tr>
+                                    <tr>
+                                        <td>aud/usd</td>
+                                        <td>0.00001</td>
+                                        <td>100000</td>
+                                        <td>0.01</td>
+                                        <td>1000</td>
+                                        <td>0.01</td>
+                                        <td>1 : 500</td>
+                                        <td>21:15</td>
+                                        <td>20:45</td>
+                                    </tr>
+                                    <tr>
+                                        <td>cad/chf</td>
+                                        <td>0.00001</td>
+                                        <td>100000</td>
+                                        <td>0.01</td>
+                                        <td>1000</td>
+                                        <td>0.01</td>
+                                        <td>1 : 500</td>
+                                        <td>21:15</td>
+                                        <td>20:45</td>
+                                    </tr>
+                                    <tr>
+                                        <td>cad/jpy</td>
+                                        <td>0.001</td>
+                                        <td>100000</td>
+                                        <td>0.01</td>
+                                        <td>1000</td>
+                                        <td>0.01</td>
+                                        <td>1 : 500</td>
+                                        <td>21:15</td>
+                                        <td>20:45</td>
+                                    </tr>
+                                    <tr>
+                                        <td>chf/jpy</td>
+                                        <td>0.001</td>
+                                        <td>100000</td>
+                                        <td>0.01</td>
+                                        <td>1000</td>
+                                        <td>0.01</td>
+                                        <td>1 : 500</td>
+                                        <td>21:15</td>
+                                        <td>20:45</td>
+                                    </tr>
+                                    <tr>
+                                        <td>eur/aud</td>
+                                        <td>0.00001</td>
+                                        <td>100000</td>
+                                        <td>0.01</td>
+                                        <td>1000</td>
+                                        <td>0.01</td>
+                                        <td>1 : 500</td>
+                                        <td>21:15</td>
+                                        <td>20:45</td>
+                                    </tr>
+                                    <tr>
+                                        <td>eur/cad</td>
+                                        <td>0.00001</td>
+                                        <td>100000</td>
+                                        <td>0.01</td>
+                                        <td>1000</td>
+                                        <td>0.01</td>
+                                        <td>1 : 500</td>
+                                        <td>21:15</td>
+                                        <td>20:45</td>
+                                    </tr>
+                                    <tr>
+                                        <td>eur/chf</td>
+                                        <td>0.00001</td>
+                                        <td>100000</td>
+                                        <td>0.01</td>
+                                        <td>1000</td>
+                                        <td>0.01</td>
+                                        <td>1 : 500</td>
+                                        <td>21:15</td>
+                                        <td>20:45</td>
+                                    </tr>
+                                    <tr>
+                                        <td>eur/gbp</td>
+                                        <td>0.00001</td>
+                                        <td>100000</td>
+                                        <td>0.01</td>
+                                        <td>1000</td>
+                                        <td>0.01</td>
+                                        <td>1 : 500</td>
+                                        <td>21:15</td>
+                                        <td>20:45</td>
+                                    </tr>
+                                    <tr>
+                                        <td>eur/jpy</td>
+                                        <td>0.001</td>
+                                        <td>100000</td>
+                                        <td>0.01</td>
+                                        <td>1000</td>
+                                        <td>0.01</td>
+                                        <td>1 : 500</td>
+                                        <td>21:15</td>
+                                        <td>20:45</td>
+                                    </tr>
+                                    <tr>
+                                        <td>eur/nok</td>
+                                        <td>0.00001</td>
+                                        <td>100000</td>
+                                        <td>0.01</td>
+                                        <td>1000</td>
+                                        <td>0.01</td>
+                                        <td>1 : 500</td>
+                                        <td>21:15</td>
+                                        <td>20:45</td>
+                                    </tr>
+                                    <tr>
+                                        <td>eur/nzd</td>
+                                        <td>0.00001</td>
+                                        <td>100000</td>
+                                        <td>0.01</td>
+                                        <td>1000</td>
+                                        <td>0.01</td>
+                                        <td>1 : 500</td>
+                                        <td>21:15</td>
+                                        <td>20:45</td>
+                                    </tr>
+                                    <tr>
+                                        <td>eur/pln</td>
+                                        <td>0.00001</td>
+                                        <td>100000</td>
+                                        <td>0.01</td>
+                                        <td>500</td>
+                                        <td>0.01</td>
+                                        <td>1 : 500</td>
+                                        <td>21:15</td>
+                                        <td>20:45</td>
+                                    </tr>
+                                    <tr>
+                                        <td>eur/sek</td>
+                                        <td>0.00001</td>
+                                        <td>100000</td>
+                                        <td>0.01</td>
+                                        <td>1000</td>
+                                        <td>0.01</td>
+                                        <td>1 : 500</td>
+                                        <td>21:15</td>
+                                        <td>20:45</td>
+                                    </tr>
+                                    <tr>
+                                        <td>eur/try</td>
+                                        <td>0.00001</td>
+                                        <td>100000</td>
+                                        <td>0.01</td>
+                                        <td>500</td>
+                                        <td>0.01</td>
+                                        <td>1 : 500</td>
+                                        <td>21:15</td>
+                                        <td>20:45</td>
+                                    </tr>
+                                    <tr>
+                                        <td>eur/usd</td>
+                                        <td>0.00001</td>
+                                        <td>100000</td>
+                                        <td>0.01</td>
+                                        <td>1000</td>
+                                        <td>0.01</td>
+                                        <td>1 : 500</td>
+                                        <td>21:15</td>
+                                        <td>20:45</td>
+                                    </tr>
+                                    <tr>
+                                        <td>gbp/aud</td>
+                                        <td>0.00001</td>
+                                        <td>100000</td>
+                                        <td>0.01</td>
+                                        <td>1000</td>
+                                        <td>0.01</td>
+                                        <td>1 : 500</td>
+                                        <td>21:15</td>
+                                        <td>20:45</td>
+                                    </tr>
+                                    <tr>
+                                        <td>gbp/cad</td>
+                                        <td>0.00001</td>
+                                        <td>100000</td>
+                                        <td>0.01</td>
+                                        <td>1000</td>
+                                        <td>0.01</td>
+                                        <td>1 : 500</td>
+                                        <td>21:15</td>
+                                        <td>20:45</td>
+                                    </tr>
+                                    <tr>
+                                        <td>gbp/chf</td>
+                                        <td>0.00001</td>
+                                        <td>100000</td>
+                                        <td>0.01</td>
+                                        <td>1000</td>
+                                        <td>0.01</td>
+                                        <td>1 : 500</td>
+                                        <td>21:15</td>
+                                        <td>20:45</td>
+                                    </tr>
+                                    <tr>
+                                        <td>gbp/jpy</td>
+                                        <td>0.001</td>
+                                        <td>100000</td>
+                                        <td>0.01</td>
+                                        <td>1000</td>
+                                        <td>0.01</td>
+                                        <td>1 : 500</td>
+                                        <td>21:15</td>
+                                        <td>20:45</td>
+                                    </tr>
+                                    <tr>
+                                        <td>gbp/nzd</td>
+                                        <td>0.00001</td>
+                                        <td>100000</td>
+                                        <td>0.01</td>
+                                        <td>1000</td>
+                                        <td>0.01</td>
+                                        <td>1 : 500</td>
+                                        <td>21:15</td>
+                                        <td>20:45</td>
+                                    </tr>
+                                    <tr>
+                                        <td>gbp/sek</td>
+                                        <td>0.00001</td>
+                                        <td>100000</td>
+                                        <td>0.01</td>
+                                        <td>1000</td>
+                                        <td>0.01</td>
+                                        <td>1 : 500</td>
+                                        <td>21:15</td>
+                                        <td>20:45</td>
+                                    </tr>
+                                    <tr>
+                                        <td>gbp/usd</td>
+                                        <td>0.00001</td>
+                                        <td>100000</td>
+                                        <td>0.01</td>
+                                        <td>1000</td>
+                                        <td>0.01</td>
+                                        <td>1 : 500</td>
+                                        <td>21:15</td>
+                                        <td>20:45</td>
+                                    </tr>
+                                    <tr>
+                                        <td>nok/sek</td>
+                                        <td>0.00001</td>
+                                        <td>100000</td>
+                                        <td>0.01</td>
+                                        <td>1000</td>
+                                        <td>0.01</td>
+                                        <td>1 : 500</td>
+                                        <td>21:15</td>
+                                        <td>20:45</td>
+                                    </tr>
+                                    <tr>
+                                        <td>nzd/cad</td>
+                                        <td>0.00001</td>
+                                        <td>100000</td>
+                                        <td>0.01</td>
+                                        <td>1000</td>
+                                        <td>0.01</td>
+                                        <td>1 : 500</td>
+                                        <td>21:15</td>
+                                        <td>20:45</td>
+                                    </tr>
+                                    <tr>
+                                        <td>nzd/chf</td>
+                                        <td>0.00001</td>
+                                        <td>100000</td>
+                                        <td>0.01</td>
+                                        <td>1000</td>
+                                        <td>0.01</td>
+                                        <td>1 : 500</td>
+                                        <td>21:15</td>
+                                        <td>20:45</td>
+                                    </tr>
+                                    <tr>
+                                        <td>nzd/jpy</td>
+                                        <td>0.001</td>
+                                        <td>100000</td>
+                                        <td>0.01</td>
+                                        <td>1000</td>
+                                        <td>0.01</td>
+                                        <td>1 : 500</td>
+                                        <td>21:15</td>
+                                        <td>20:45</td>
+                                    </tr>
+                                    <tr>
+                                        <td>nzd/usd</td>
+                                        <td>0.00001</td>
+                                        <td>100000</td>
+                                        <td>0.01</td>
+                                        <td>1000</td>
+                                        <td>0.01</td>
+                                        <td>1 : 500</td>
+                                        <td>21:15</td>
+                                        <td>20:45</td>
+                                    </tr>
+                                    <tr>
+                                        <td>usd/cad</td>
+                                        <td>0.00001</td>
+                                        <td>100000</td>
+                                        <td>0.01</td>
+                                        <td>1000</td>
+                                        <td>0.01</td>
+                                        <td>1 : 500</td>
+                                        <td>21:15</td>
+                                        <td>20:45</td>
+                                    </tr>
+                                    <tr>
+                                        <td>usd/chf</td>
+                                        <td>0.00001</td>
+                                        <td>100000</td>
+                                        <td>0.01</td>
+                                        <td>1000</td>
+                                        <td>0.01</td>
+                                        <td>1 : 500</td>
+                                        <td>21:15</td>
+                                        <td>20:45</td>
+                                    </tr>
+                                    <tr>
+                                        <td>usd/cnh</td>
+                                        <td>0.00001</td>
+                                        <td>100000</td>
+                                        <td>0.01</td>
+                                        <td>500</td>
+                                        <td>0.01</td>
+                                        <td>1 : 500</td>
+                                        <td>21:15</td>
+                                        <td>20:45</td>
+                                    </tr>
+                                    <tr>
+                                        <td>usd/jpy</td>
+                                        <td>0.001</td>
+                                        <td>100000</td>
+                                        <td>0.01</td>
+                                        <td>1000</td>
+                                        <td>0.01</td>
+                                        <td>1 : 500</td>
+                                        <td>21:15</td>
+                                        <td>20:45</td>
+                                    </tr>
+                                    <tr>
+                                        <td>usd/mxn</td>
+                                        <td>0.00001</td>
+                                        <td>100000</td>
+                                        <td>0.01</td>
+                                        <td>500</td>
+                                        <td>0.01</td>
+                                        <td>1 : 500</td>
+                                        <td>21:15</td>
+                                        <td>20:45</td>
+                                    </tr>
+                                    <tr>
+                                        <td>usd/nok</td>
+                                        <td>0.00001</td>
+                                        <td>100000</td>
+                                        <td>0.01</td>
+                                        <td>1000</td>
+                                        <td>0.01</td>
+                                        <td>1 : 500</td>
+                                        <td>21:15</td>
+                                        <td>20:45</td>
+                                    </tr>
+                                    <tr>
+                                        <td>usd/pln</td>
+                                        <td>0.00001</td>
+                                        <td>100000</td>
+                                        <td>0.01</td>
+                                        <td>500</td>
+                                        <td>0.01</td>
+                                        <td>1 : 500</td>
+                                        <td>21:15</td>
+                                        <td>20:45</td>
+                                    </tr>
+                                    <tr>
+                                        <td>usd/rub</td>
+                                        <td>0.0001</td>
+                                        <td>100000</td>
+                                        <td>0.01</td>
+                                        <td>500</td>
+                                        <td>0.01</td>
+                                        <td>1 : 500</td>
+                                        <td>5:30</td>
+                                        <td>14:30</td>
+                                    </tr>
+                                    <tr>
+                                        <td>usd/sek</td>
+                                        <td>0.00001</td>
+                                        <td>100000</td>
+                                        <td>0.01</td>
+                                        <td>1000</td>
+                                        <td>0.01</td>
+                                        <td>1 : 500</td>
+                                        <td>21:15</td>
+                                        <td>20:45</td>
+                                    </tr>
+                                    <tr>
+                                        <td>usd/sgd</td>
+                                        <td>0.00001</td>
+                                        <td>100000</td>
+                                        <td>0.01</td>
+                                        <td>500</td>
+                                        <td>0.01</td>
+                                        <td>1 : 500</td>
+                                        <td>21:15</td>
+                                        <td>20:45</td>
+                                    </tr>
+                                    <tr>
+                                        <td>usd/try</td>
+                                        <td>0.00001</td>
+                                        <td>100000</td>
+                                        <td>0.01</td>
+                                        <td>500</td>
+                                        <td>0.01</td>
+                                        <td>1 : 500</td>
+                                        <td>21:15</td>
+                                        <td>20:45</td>
+                                    </tr>
+                                    <tr>
+                                        <td>usd/zar</td>
+                                        <td>0.00001</td>
+                                        <td>100000</td>
+                                        <td>0.01</td>
+                                        <td>500</td>
+                                        <td>0.01</td>
+                                        <td>1 : 500</td>
+                                        <td>21:15</td>
+                                        <td>20:45</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div data-id="metals" class="tab-info">
+                            <div class="table-wrap">
+                                <table>
+                                    <thead>
+                                    <tr>
+                                        <th>Заголовок</th>
+                                        <th>Инструмент</th>
+                                        <th>Мин. изменение цены</th>
+                                        <th>Стандартный лот</th>
+                                        <th>Мин. размер лота</th>
+                                        <th>Макс. размер лота</th>
+                                        <th>Шаг изменения объема в лотах</th>
+                                        <th>Макс. плечо</th>
+                                        <th>Открытие*</th>
+                                        <th>Закрытие*</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>gold</td>
+                                        <td>xau/usd</td>
+                                        <td>0.01</td>
+                                        <td>100</td>
+                                        <td>0.1</td>
+                                        <td>1000</td>
+                                        <td>0.1</td>
+                                        <td>1 : 500</td>
+                                        <td>22:15</td>
+                                        <td>20:45</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div data-id="stocks" class="tab-info">
+                            <div class="table-wrap">
+                                <table>
+                                    <thead>
+                                    <tr>
+                                        <th>Заголовок</th>
+                                        <th>Инструмент</th>
+                                        <th>Страна</th>
+                                        <th>Котировки валют</th>
+                                        <th>Мин. изменение цены</th>
+                                        <th>Мин. размер лота</th>
+                                        <th>Макс. размер лота</th>
+                                        <th>Макс. плечо</th>
+                                        <th>Количество контрактов на 1 лот</th>
+                                        <th>Открытие*</th>
+                                        <th>Закрытие*</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>alcoa corp</td>
+                                        <td>aa</td>
+                                        <td>usa</td>
+                                        <td>usd</td>
+                                        <td>0.01</td>
+                                        <td>1</td>
+                                        <td>10000</td>
+                                        <td>1:50</td>
+                                        <td>1</td>
+                                        <td>13:45</td>
+                                        <td>19:45</td>
+                                    </tr>
+                                    <tr>
+                                        <td>altaba (yahoo)</td>
+                                        <td>aabb</td>
+                                        <td>usa</td>
+                                        <td>usd</td>
+                                        <td>0.01</td>
+                                        <td>1</td>
+                                        <td>10000</td>
+                                        <td>1:50</td>
+                                        <td>1</td>
+                                        <td>13:45</td>
+                                        <td>19:45</td>
+                                    </tr>
+                                    <tr>
+                                        <td>apple inc</td>
+                                        <td>aapl</td>
+                                        <td>usa</td>
+                                        <td>usd</td>
+                                        <td>0.01</td>
+                                        <td>1</td>
+                                        <td>10000</td>
+                                        <td>1:50</td>
+                                        <td>1</td>
+                                        <td>13:45</td>
+                                        <td>19:45</td>
+                                    </tr>
+                                    <tr>
+                                        <td>admiral group</td>
+                                        <td>adm</td>
+                                        <td>uk</td>
+                                        <td>gbp</td>
+                                        <td>0.0001</td>
+                                        <td>1</td>
+                                        <td>10000</td>
+                                        <td>1:50</td>
+                                        <td>1</td>
+                                        <td>7:15</td>
+                                        <td>15:15</td>
+                                    </tr>
+                                    <tr>
+                                        <td>adidas</td>
+                                        <td>ads</td>
+                                        <td>germany</td>
+                                        <td>eur</td>
+                                        <td>0.001</td>
+                                        <td>1</td>
+                                        <td>10000</td>
+                                        <td>1:50</td>
+                                        <td>1</td>
+                                        <td>7:15</td>
+                                        <td>15:15</td>
+                                    </tr>
+                                    <tr>
+                                        <td>american international group inc</td>
+                                        <td>aig</td>
+                                        <td>usa</td>
+                                        <td>usd</td>
+                                        <td>0.01</td>
+                                        <td>1</td>
+                                        <td>10000</td>
+                                        <td>1:50</td>
+                                        <td>1</td>
+                                        <td>13:45</td>
+                                        <td>19:45</td>
+                                    </tr>
+                                    <tr>
+                                        <td>airbus group</td>
+                                        <td>air</td>
+                                        <td>france</td>
+                                        <td>eur</td>
+                                        <td>0.01</td>
+                                        <td>1</td>
+                                        <td>10000</td>
+                                        <td>1:50</td>
+                                        <td>1</td>
+                                        <td>7:15</td>
+                                        <td>15:15</td>
+                                    </tr>
+                                    <tr>
+                                        <td>amazon.com inc</td>
+                                        <td>amzn</td>
+                                        <td>usa</td>
+                                        <td>usd</td>
+                                        <td>0.01</td>
+                                        <td>1</td>
+                                        <td>10000</td>
+                                        <td>1:50</td>
+                                        <td>1</td>
+                                        <td>13:45</td>
+                                        <td>19:45</td>
+                                    </tr>
+                                    <tr>
+                                        <td>tatneft</td>
+                                        <td>atad</td>
+                                        <td>uk</td>
+                                        <td>usd</td>
+                                        <td>0.01</td>
+                                        <td>1</td>
+                                        <td>10000</td>
+                                        <td>1:50</td>
+                                        <td>1</td>
+                                        <td>7:15</td>
+                                        <td>14:15</td>
+                                    </tr>
+                                    <tr>
+                                        <td>aviva plc</td>
+                                        <td>av</td>
+                                        <td>uk</td>
+                                        <td>gbp</td>
+                                        <td>0.0001</td>
+                                        <td>1</td>
+                                        <td>10000</td>
+                                        <td>1:50</td>
+                                        <td>1</td>
+                                        <td>7:15</td>
+                                        <td>15:15</td>
+                                    </tr>
+                                    <tr>
+                                        <td>american express company</td>
+                                        <td>axp</td>
+                                        <td>usa</td>
+                                        <td>usd</td>
+                                        <td>0.01</td>
+                                        <td>1</td>
+                                        <td>10000</td>
+                                        <td>1:50</td>
+                                        <td>1</td>
+                                        <td>13:45</td>
+                                        <td>19:45</td>
+                                    </tr>
+                                    <tr>
+                                        <td>boeing company</td>
+                                        <td>ba</td>
+                                        <td>usa</td>
+                                        <td>usd</td>
+                                        <td>0.01</td>
+                                        <td>1</td>
+                                        <td>10000</td>
+                                        <td>1:50</td>
+                                        <td>1</td>
+                                        <td>13:45</td>
+                                        <td>19:45</td>
+                                    </tr>
+                                    <tr>
+                                        <td>bank of america corporation</td>
+                                        <td>bac</td>
+                                        <td>usa</td>
+                                        <td>usd</td>
+                                        <td>0.01</td>
+                                        <td>1</td>
+                                        <td>10000</td>
+                                        <td>1:50</td>
+                                        <td>1</td>
+                                        <td>13:45</td>
+                                        <td>19:45</td>
+                                    </tr>
+                                    <tr>
+                                        <td>barclays plc</td>
+                                        <td>barc</td>
+                                        <td>uk</td>
+                                        <td>gbp</td>
+                                        <td>0.0001</td>
+                                        <td>1</td>
+                                        <td>10000</td>
+                                        <td>1:50</td>
+                                        <td>1</td>
+                                        <td>7:15</td>
+                                        <td>15:15</td>
+                                    </tr>
+                                    <tr>
+                                        <td>british american tobacco</td>
+                                        <td>bats</td>
+                                        <td>uk</td>
+                                        <td>gbp</td>
+                                        <td>0.0001</td>
+                                        <td>1</td>
+                                        <td>10000</td>
+                                        <td>1:50</td>
+                                        <td>1</td>
+                                        <td>7:15</td>
+                                        <td>15:15</td>
+                                    </tr>
+                                    <tr>
+                                        <td>bayer</td>
+                                        <td>bayn</td>
+                                        <td>germany</td>
+                                        <td>eur</td>
+                                        <td>0.001</td>
+                                        <td>1</td>
+                                        <td>10000</td>
+                                        <td>1:50</td>
+                                        <td>1</td>
+                                        <td>7:15</td>
+                                        <td>15:15</td>
+                                    </tr>
+                                    <tr>
+                                        <td>bankia</td>
+                                        <td>bkia</td>
+                                        <td>spain</td>
+                                        <td>eur</td>
+                                        <td>0.001</td>
+                                        <td>1</td>
+                                        <td>10000</td>
+                                        <td>1:50</td>
+                                        <td>1</td>
+                                        <td>7:15</td>
+                                        <td>15:15</td>
+                                    </tr>
+                                    <tr>
+                                        <td>bmw</td>
+                                        <td>bmw</td>
+                                        <td>germany</td>
+                                        <td>eur</td>
+                                        <td>0.001</td>
+                                        <td>1</td>
+                                        <td>10000</td>
+                                        <td>1:50</td>
+                                        <td>1</td>
+                                        <td>7:15</td>
+                                        <td>15:15</td>
+                                    </tr>
+                                    <tr>
+                                        <td>danone</td>
+                                        <td>bn</td>
+                                        <td>france</td>
+                                        <td>eur</td>
+                                        <td>0.01</td>
+                                        <td>1</td>
+                                        <td>10000</td>
+                                        <td>1:50</td>
+                                        <td>1</td>
+                                        <td>7:15</td>
+                                        <td>15:15</td>
+                                    </tr>
+                                    <tr>
+                                        <td>burberry group</td>
+                                        <td>brby</td>
+                                        <td>uk</td>
+                                        <td>gbp</td>
+                                        <td>0.0001</td>
+                                        <td>1</td>
+                                        <td>10000</td>
+                                        <td>1:50</td>
+                                        <td>1</td>
+                                        <td>7:15</td>
+                                        <td>15:15</td>
+                                    </tr>
+                                    <tr>
+                                        <td>centrica plc</td>
+                                        <td>can</td>
+                                        <td>uk</td>
+                                        <td>gbp</td>
+                                        <td>0.0001</td>
+                                        <td>1</td>
+                                        <td>10000</td>
+                                        <td>1:50</td>
+                                        <td>1</td>
+                                        <td>7:15</td>
+                                        <td>15:15</td>
+                                    </tr>
+                                    <tr>
+                                        <td>caterpillar inc</td>
+                                        <td>cat</td>
+                                        <td>usa</td>
+                                        <td>usd</td>
+                                        <td>0.01</td>
+                                        <td>1</td>
+                                        <td>10000</td>
+                                        <td>1:50</td>
+                                        <td>1</td>
+                                        <td>13:45</td>
+                                        <td>19:45</td>
+                                    </tr>
+                                    <tr>
+                                        <td>severstal</td>
+                                        <td>chmf</td>
+                                        <td>russia</td>
+                                        <td>rub</td>
+                                        <td>0.01</td>
+                                        <td>1</td>
+                                        <td>1000</td>
+                                        <td>1:50</td>
+                                        <td>1</td>
+                                        <td>7:15</td>
+                                        <td>14:15</td>
+                                    </tr>
+                                    <tr>
+                                        <td>continental</td>
+                                        <td>con</td>
+                                        <td>germany</td>
+                                        <td>eur</td>
+                                        <td>0.001</td>
+                                        <td>1</td>
+                                        <td>10000</td>
+                                        <td>1:50</td>
+                                        <td>1</td>
+                                        <td>7:15</td>
+                                        <td>15:15</td>
+                                    </tr>
+                                    <tr>
+                                        <td>cisco systems inc</td>
+                                        <td>csco</td>
+                                        <td>usa</td>
+                                        <td>usd</td>
+                                        <td>0.01</td>
+                                        <td>1</td>
+                                        <td>10000</td>
+                                        <td>1:50</td>
+                                        <td>1</td>
+                                        <td>13:45</td>
+                                        <td>19:45</td>
+                                    </tr>
+                                    <tr>
+                                        <td>chevron corporation</td>
+                                        <td>cvx</td>
+                                        <td>usa</td>
+                                        <td>usd</td>
+                                        <td>0.01</td>
+                                        <td>1</td>
+                                        <td>10000</td>
+                                        <td>1:50</td>
+                                        <td>1</td>
+                                        <td>13:45</td>
+                                        <td>19:45</td>
+                                    </tr>
+                                    <tr>
+                                        <td>ei du pont de nemours and company</td>
+                                        <td>dd</td>
+                                        <td>usa</td>
+                                        <td>usd</td>
+                                        <td>0.01</td>
+                                        <td>1</td>
+                                        <td>10000</td>
+                                        <td>1:50</td>
+                                        <td>1</td>
+                                        <td>13:45</td>
+                                        <td>19:45</td>
+                                    </tr>
+                                    <tr>
+                                        <td>walt disney company</td>
+                                        <td>dis</td>
+                                        <td>usa</td>
+                                        <td>usd</td>
+                                        <td>0.01</td>
+                                        <td>1</td>
+                                        <td>10000</td>
+                                        <td>1:50</td>
+                                        <td>1</td>
+                                        <td>13:45</td>
+                                        <td>19:45</td>
+                                    </tr>
+                                    <tr>
+                                        <td>deutsche post</td>
+                                        <td>dpw</td>
+                                        <td>germany</td>
+                                        <td>eur</td>
+                                        <td>0.001</td>
+                                        <td>1</td>
+                                        <td>10000</td>
+                                        <td>1:50</td>
+                                        <td>1</td>
+                                        <td>7:15</td>
+                                        <td>15:15</td>
+                                    </tr>
+                                    <tr>
+                                        <td>deutsche telekom</td>
+                                        <td>dte</td>
+                                        <td>germany</td>
+                                        <td>eur</td>
+                                        <td>0.001</td>
+                                        <td>1</td>
+                                        <td>10000</td>
+                                        <td>1:50</td>
+                                        <td>1</td>
+                                        <td>7:15</td>
+                                        <td>15:15</td>
+                                    </tr>
+                                    <tr>
+                                        <td>ebay inc</td>
+                                        <td>ebay</td>
+                                        <td>usa</td>
+                                        <td>usd</td>
+                                        <td>0.01</td>
+                                        <td>1</td>
+                                        <td>10000</td>
+                                        <td>1:50</td>
+                                        <td>1</td>
+                                        <td>13:45</td>
+                                        <td>19:45</td>
+                                    </tr>
+                                    <tr>
+                                        <td>freeport-mcmoran copper &amp; gold inc</td>
+                                        <td>fcx</td>
+                                        <td>usa</td>
+                                        <td>usd</td>
+                                        <td>0.01</td>
+                                        <td>1</td>
+                                        <td>10000</td>
+                                        <td>1:50</td>
+                                        <td>1</td>
+                                        <td>13:45</td>
+                                        <td>19:45</td>
+                                    </tr>
+                                    <tr>
+                                        <td>fedex corporation</td>
+                                        <td>fdx</td>
+                                        <td>usa</td>
+                                        <td>usd</td>
+                                        <td>0.01</td>
+                                        <td>1</td>
+                                        <td>10000</td>
+                                        <td>1:50</td>
+                                        <td>1</td>
+                                        <td>13:45</td>
+                                        <td>19:45</td>
+                                    </tr>
+                                    <tr>
+                                        <td>total</td>
+                                        <td>fp</td>
+                                        <td>france</td>
+                                        <td>eur</td>
+                                        <td>0.01</td>
+                                        <td>1</td>
+                                        <td>10000</td>
+                                        <td>1:50</td>
+                                        <td>1</td>
+                                        <td>7:15</td>
+                                        <td>15:15</td>
+                                    </tr>
+                                    <tr>
+                                        <td>gas natural sdg</td>
+                                        <td>gas</td>
+                                        <td>spain</td>
+                                        <td>eur</td>
+                                        <td>0.005</td>
+                                        <td>1</td>
+                                        <td>10000</td>
+                                        <td>1:50</td>
+                                        <td>1</td>
+                                        <td>7:15</td>
+                                        <td>15:15</td>
+                                    </tr>
+                                    <tr>
+                                        <td>gazprom</td>
+                                        <td>gazp</td>
+                                        <td>russia</td>
+                                        <td>rub</td>
+                                        <td>0.01</td>
+                                        <td>1</td>
+                                        <td>1000</td>
+                                        <td>1:50</td>
+                                        <td>1</td>
+                                        <td>7:15</td>
+                                        <td>14:15</td>
+                                    </tr>
+                                    <tr>
+                                        <td>general electric company</td>
+                                        <td>ge</td>
+                                        <td>usa</td>
+                                        <td>usd</td>
+                                        <td>0.01</td>
+                                        <td>1</td>
+                                        <td>10000</td>
+                                        <td>1:50</td>
+                                        <td>1</td>
+                                        <td>13:45</td>
+                                        <td>19:45</td>
+                                    </tr>
+                                    <tr>
+                                        <td>glencore plc</td>
+                                        <td>glen</td>
+                                        <td>uk</td>
+                                        <td>gbp</td>
+                                        <td>0.0001</td>
+                                        <td>1</td>
+                                        <td>10000</td>
+                                        <td>1:50</td>
+                                        <td>1</td>
+                                        <td>7:15</td>
+                                        <td>15:15</td>
+                                    </tr>
+                                    <tr>
+                                        <td>norilskiy nickel</td>
+                                        <td>gmkn</td>
+                                        <td>russia</td>
+                                        <td>rub</td>
+                                        <td>0.01</td>
+                                        <td>1</td>
+                                        <td>1000</td>
+                                        <td>1:50</td>
+                                        <td>1</td>
+                                        <td>7:15</td>
+                                        <td>14:15</td>
+                                    </tr>
+                                    <tr>
+                                        <td>alphabet inc c</td>
+                                        <td>goog</td>
+                                        <td>usa</td>
+                                        <td>usd</td>
+                                        <td>0.01</td>
+                                        <td>1</td>
+                                        <td>10000</td>
+                                        <td>1:50</td>
+                                        <td>1</td>
+                                        <td>13:45</td>
+                                        <td>19:45</td>
+                                    </tr>
+                                    <tr>
+                                        <td>glaxosmitdkline plc</td>
+                                        <td>gsk</td>
+                                        <td>uk</td>
+                                        <td>gbp</td>
+                                        <td>0.0001</td>
+                                        <td>1</td>
+                                        <td>10000</td>
+                                        <td>1:50</td>
+                                        <td>1</td>
+                                        <td>7:15</td>
+                                        <td>15:15</td>
+                                    </tr>
+                                    <tr>
+                                        <td>tde goodyear tire &amp; rubber company</td>
+                                        <td>gt</td>
+                                        <td>usa</td>
+                                        <td>usd</td>
+                                        <td>0.01</td>
+                                        <td>1</td>
+                                        <td>1000</td>
+                                        <td>1:50</td>
+                                        <td>1</td>
+                                        <td>13:45</td>
+                                        <td>19:45</td>
+                                    </tr>
+                                    <tr>
+                                        <td>halliburton company</td>
+                                        <td>hal</td>
+                                        <td>usa</td>
+                                        <td>usd</td>
+                                        <td>0.01</td>
+                                        <td>1</td>
+                                        <td>10000</td>
+                                        <td>1:50</td>
+                                        <td>1</td>
+                                        <td>13:45</td>
+                                        <td>19:45</td>
+                                    </tr>
+                                    <tr>
+                                        <td>home depot inc</td>
+                                        <td>hd</td>
+                                        <td>usa</td>
+                                        <td>usd</td>
+                                        <td>0.01</td>
+                                        <td>1</td>
+                                        <td>10000</td>
+                                        <td>1:50</td>
+                                        <td>1</td>
+                                        <td>13:45</td>
+                                        <td>19:45</td>
+                                    </tr>
+                                    <tr>
+                                        <td>henkel &amp; co kgaa</td>
+                                        <td>hen3</td>
+                                        <td>germany</td>
+                                        <td>eur</td>
+                                        <td>0.001</td>
+                                        <td>1</td>
+                                        <td>10000</td>
+                                        <td>1:50</td>
+                                        <td>1</td>
+                                        <td>7:15</td>
+                                        <td>15:15</td>
+                                    </tr>
+                                    <tr>
+                                        <td>hp inc</td>
+                                        <td>hpq</td>
+                                        <td>usa</td>
+                                        <td>usd</td>
+                                        <td>0.01</td>
+                                        <td>1</td>
+                                        <td>10000</td>
+                                        <td>1:50</td>
+                                        <td>1</td>
+                                        <td>13:45</td>
+                                        <td>19:45</td>
+                                    </tr>
+                                    <tr>
+                                        <td>international business machines</td>
+                                        <td>ibm</td>
+                                        <td>usa</td>
+                                        <td>usd</td>
+                                        <td>0.01</td>
+                                        <td>1</td>
+                                        <td>10000</td>
+                                        <td>1:50</td>
+                                        <td>1</td>
+                                        <td>13:45</td>
+                                        <td>19:45</td>
+                                    </tr>
+                                    <tr>
+                                        <td>intel corporation</td>
+                                        <td>intc</td>
+                                        <td>usa</td>
+                                        <td>usd</td>
+                                        <td>0.01</td>
+                                        <td>1</td>
+                                        <td>10000</td>
+                                        <td>1:50</td>
+                                        <td>1</td>
+                                        <td>13:45</td>
+                                        <td>19:45</td>
+                                    </tr>
+                                    <tr>
+                                        <td>international paper company</td>
+                                        <td>ip</td>
+                                        <td>usa</td>
+                                        <td>usd</td>
+                                        <td>0.01</td>
+                                        <td>1</td>
+                                        <td>10000</td>
+                                        <td>1:50</td>
+                                        <td>1</td>
+                                        <td>13:45</td>
+                                        <td>19:45</td>
+                                    </tr>
+                                    <tr>
+                                        <td>johnson &amp; johnson</td>
+                                        <td>jnj</td>
+                                        <td>usa</td>
+                                        <td>usd</td>
+                                        <td>0.01</td>
+                                        <td>1</td>
+                                        <td>10000</td>
+                                        <td>1:50</td>
+                                        <td>1</td>
+                                        <td>13:45</td>
+                                        <td>19:45</td>
+                                    </tr>
+                                    <tr>
+                                        <td>jpmorgan chase &amp; co</td>
+                                        <td>jpm</td>
+                                        <td>usa</td>
+                                        <td>usd</td>
+                                        <td>0.01</td>
+                                        <td>1</td>
+                                        <td>10000</td>
+                                        <td>1:50</td>
+                                        <td>1</td>
+                                        <td>13:45</td>
+                                        <td>19:45</td>
+                                    </tr>
+                                    <tr>
+                                        <td>coca-cola company</td>
+                                        <td>ko</td>
+                                        <td>usa</td>
+                                        <td>usd</td>
+                                        <td>0.01</td>
+                                        <td>1</td>
+                                        <td>10000</td>
+                                        <td>1:50</td>
+                                        <td>1</td>
+                                        <td>13:45</td>
+                                        <td>19:45</td>
+                                    </tr>
+                                    <tr>
+                                        <td>kraton performance polymers</td>
+                                        <td>kra</td>
+                                        <td>usa</td>
+                                        <td>usd</td>
+                                        <td>0.01</td>
+                                        <td>1</td>
+                                        <td>1000</td>
+                                        <td>1:50</td>
+                                        <td>1</td>
+                                        <td>13:45</td>
+                                        <td>19:45</td>
+                                    </tr>
+                                    <tr>
+                                        <td>legal &amp; general group plc</td>
+                                        <td>lgen</td>
+                                        <td>uk</td>
+                                        <td>gbp</td>
+                                        <td>0.0001</td>
+                                        <td>1</td>
+                                        <td>10000</td>
+                                        <td>1:50</td>
+                                        <td>1</td>
+                                        <td>7:15</td>
+                                        <td>15:15</td>
+                                    </tr>
+                                    <tr>
+                                        <td>lukoil</td>
+                                        <td>lkoh</td>
+                                        <td>russia</td>
+                                        <td>rub</td>
+                                        <td>0.1</td>
+                                        <td>1</td>
+                                        <td>1000</td>
+                                        <td>1:50</td>
+                                        <td>1</td>
+                                        <td>7:15</td>
+                                        <td>14:15</td>
+                                    </tr>
+                                    <tr>
+                                        <td>lloyds banking group plc</td>
+                                        <td>lloy</td>
+                                        <td>uk</td>
+                                        <td>gbp</td>
+                                        <td>0.0001</td>
+                                        <td>1</td>
+                                        <td>10000</td>
+                                        <td>1:50</td>
+                                        <td>1</td>
+                                        <td>7:15</td>
+                                        <td>15:15</td>
+                                    </tr>
+                                    <tr>
+                                        <td>mapfre</td>
+                                        <td>map</td>
+                                        <td>spain</td>
+                                        <td>eur</td>
+                                        <td>0.001</td>
+                                        <td>1</td>
+                                        <td>10000</td>
+                                        <td>1:50</td>
+                                        <td>1</td>
+                                        <td>7:15</td>
+                                        <td>15:15</td>
+                                    </tr>
+                                    <tr>
+                                        <td>moet henenssy louis vuitton</td>
+                                        <td>mc</td>
+                                        <td>france</td>
+                                        <td>eur</td>
+                                        <td>0.05</td>
+                                        <td>1</td>
+                                        <td>10000</td>
+                                        <td>1:50</td>
+                                        <td>1</td>
+                                        <td>7:15</td>
+                                        <td>15:15</td>
+                                    </tr>
+                                    <tr>
+                                        <td>mcdonalds corporation</td>
+                                        <td>mcd</td>
+                                        <td>usa</td>
+                                        <td>usd</td>
+                                        <td>0.01</td>
+                                        <td>1</td>
+                                        <td>10000</td>
+                                        <td>1:50</td>
+                                        <td>1</td>
+                                        <td>13:45</td>
+                                        <td>19:45</td>
+                                    </tr>
+                                    <tr>
+                                        <td>magnit</td>
+                                        <td>mgnt</td>
+                                        <td>uk</td>
+                                        <td>usd</td>
+                                        <td>0.01</td>
+                                        <td>1</td>
+                                        <td>10000</td>
+                                        <td>1:50</td>
+                                        <td>1</td>
+                                        <td>7:15</td>
+                                        <td>14:15</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3m company</td>
+                                        <td>mmm</td>
+                                        <td>usa</td>
+                                        <td>usd</td>
+                                        <td>0.01</td>
+                                        <td>1</td>
+                                        <td>10000</td>
+                                        <td>1:50</td>
+                                        <td>1</td>
+                                        <td>13:45</td>
+                                        <td>19:45</td>
+                                    </tr>
+                                    <tr>
+                                        <td>altria group</td>
+                                        <td>mo</td>
+                                        <td>usa</td>
+                                        <td>usd</td>
+                                        <td>0.01</td>
+                                        <td>1</td>
+                                        <td>10000</td>
+                                        <td>1:50</td>
+                                        <td>1</td>
+                                        <td>13:45</td>
+                                        <td>19:45</td>
+                                    </tr>
+                                    <tr>
+                                        <td>merck &amp; company inc</td>
+                                        <td>mrk</td>
+                                        <td>usa</td>
+                                        <td>usd</td>
+                                        <td>0.01</td>
+                                        <td>1</td>
+                                        <td>10000</td>
+                                        <td>1:50</td>
+                                        <td>1</td>
+                                        <td>13:45</td>
+                                        <td>19:45</td>
+                                    </tr>
+                                    <tr>
+                                        <td>microsoft corporation</td>
+                                        <td>msft</td>
+                                        <td>usa</td>
+                                        <td>usd</td>
+                                        <td>0.01</td>
+                                        <td>1</td>
+                                        <td>10000</td>
+                                        <td>1:50</td>
+                                        <td>1</td>
+                                        <td>13:45</td>
+                                        <td>19:45</td>
+                                    </tr>
+                                    <tr>
+                                        <td>mechel preferred</td>
+                                        <td>mtlrp</td>
+                                        <td>russia</td>
+                                        <td>rub</td>
+                                        <td>0.01</td>
+                                        <td>1</td>
+                                        <td>100</td>
+                                        <td>1:50</td>
+                                        <td>10</td>
+                                        <td>7:15</td>
+                                        <td>14:15</td>
+                                    </tr>
+                                    <tr>
+                                        <td>l'oreal</td>
+                                        <td>or</td>
+                                        <td>france</td>
+                                        <td>eur</td>
+                                        <td>0.01</td>
+                                        <td>1</td>
+                                        <td>10000</td>
+                                        <td>1:50</td>
+                                        <td>1</td>
+                                        <td>7:15</td>
+                                        <td>15:15</td>
+                                    </tr>
+                                    <tr>
+                                        <td>oracle corporation</td>
+                                        <td>orcl</td>
+                                        <td>usa</td>
+                                        <td>usd</td>
+                                        <td>0.01</td>
+                                        <td>1</td>
+                                        <td>10000</td>
+                                        <td>1:50</td>
+                                        <td>1</td>
+                                        <td>13:45</td>
+                                        <td>19:45</td>
+                                    </tr>
+                                    <tr>
+                                        <td>pepsico inc</td>
+                                        <td>pep</td>
+                                        <td>usa</td>
+                                        <td>usd</td>
+                                        <td>0.01</td>
+                                        <td>1</td>
+                                        <td>10000</td>
+                                        <td>1:50</td>
+                                        <td>1</td>
+                                        <td>13:45</td>
+                                        <td>19:45</td>
+                                    </tr>
+                                    <tr>
+                                        <td>pfizer inc</td>
+                                        <td>pfe</td>
+                                        <td>usa</td>
+                                        <td>usd</td>
+                                        <td>0.01</td>
+                                        <td>1</td>
+                                        <td>10000</td>
+                                        <td>1:50</td>
+                                        <td>1</td>
+                                        <td>13:45</td>
+                                        <td>19:45</td>
+                                    </tr>
+                                    <tr>
+                                        <td>procter &amp; gamble company</td>
+                                        <td>pg</td>
+                                        <td>usa</td>
+                                        <td>usd</td>
+                                        <td>0.01</td>
+                                        <td>1</td>
+                                        <td>10000</td>
+                                        <td>1:50</td>
+                                        <td>1</td>
+                                        <td>13:45</td>
+                                        <td>19:45</td>
+                                    </tr>
+                                    <tr>
+                                        <td>polus zoloto</td>
+                                        <td>plzl</td>
+                                        <td>russia</td>
+                                        <td>rub</td>
+                                        <td>0.1</td>
+                                        <td>1</td>
+                                        <td>1000</td>
+                                        <td>1:50</td>
+                                        <td>1</td>
+                                        <td>7:15</td>
+                                        <td>14:15</td>
+                                    </tr>
+                                    <tr>
+                                        <td>prudential plc</td>
+                                        <td>pru</td>
+                                        <td>uk</td>
+                                        <td>gbp</td>
+                                        <td>0.0001</td>
+                                        <td>1</td>
+                                        <td>10000</td>
+                                        <td>1:50</td>
+                                        <td>1</td>
+                                        <td>7:15</td>
+                                        <td>15:15</td>
+                                    </tr>
+                                    <tr>
+                                        <td>qualcomm incorporated</td>
+                                        <td>qcom</td>
+                                        <td>usa</td>
+                                        <td>usd</td>
+                                        <td>0.01</td>
+                                        <td>1</td>
+                                        <td>10000</td>
+                                        <td>1:50</td>
+                                        <td>1</td>
+                                        <td>13:45</td>
+                                        <td>19:45</td>
+                                    </tr>
+                                    <tr>
+                                        <td>royal bank of scotland group plc</td>
+                                        <td>rbs</td>
+                                        <td>uk</td>
+                                        <td>gbp</td>
+                                        <td>0.0001</td>
+                                        <td>1</td>
+                                        <td>10000</td>
+                                        <td>1:50</td>
+                                        <td>1</td>
+                                        <td>7:15</td>
+                                        <td>15:15</td>
+                                    </tr>
+                                    <tr>
+                                        <td>repsol</td>
+                                        <td>rep</td>
+                                        <td>spain</td>
+                                        <td>eur</td>
+                                        <td>0.005</td>
+                                        <td>1</td>
+                                        <td>10000</td>
+                                        <td>1:50</td>
+                                        <td>1</td>
+                                        <td>7:15</td>
+                                        <td>15:15</td>
+                                    </tr>
+                                    <tr>
+                                        <td>renault</td>
+                                        <td>rno</td>
+                                        <td>france</td>
+                                        <td>eur</td>
+                                        <td>0.01</td>
+                                        <td>1</td>
+                                        <td>10000</td>
+                                        <td>1:50</td>
+                                        <td>1</td>
+                                        <td>7:15</td>
+                                        <td>15:15</td>
+                                    </tr>
+                                    <tr>
+                                        <td>rosneft</td>
+                                        <td>rosn</td>
+                                        <td>russia</td>
+                                        <td>rub</td>
+                                        <td>0.01</td>
+                                        <td>1</td>
+                                        <td>1000</td>
+                                        <td>1:50</td>
+                                        <td>1</td>
+                                        <td>7:15</td>
+                                        <td>14:15</td>
+                                    </tr>
+                                    <tr>
+                                        <td>rolls-royce holdings</td>
+                                        <td>rr</td>
+                                        <td>uk</td>
+                                        <td>gbp</td>
+                                        <td>0.0001</td>
+                                        <td>1</td>
+                                        <td>10000</td>
+                                        <td>1:50</td>
+                                        <td>1</td>
+                                        <td>7:15</td>
+                                        <td>15:15</td>
+                                    </tr>
+                                    <tr>
+                                        <td>rostelecom</td>
+                                        <td>rtkm</td>
+                                        <td>russia</td>
+                                        <td>rub</td>
+                                        <td>0.01</td>
+                                        <td>10</td>
+                                        <td>1000</td>
+                                        <td>1:50</td>
+                                        <td>1</td>
+                                        <td>7:15</td>
+                                        <td>14:15</td>
+                                    </tr>
+                                    <tr>
+                                        <td>sberbank</td>
+                                        <td>sber</td>
+                                        <td>russia</td>
+                                        <td>rub</td>
+                                        <td>0.01</td>
+                                        <td>1</td>
+                                        <td>1000</td>
+                                        <td>1:50</td>
+                                        <td>1</td>
+                                        <td>7:15</td>
+                                        <td>14:15</td>
+                                    </tr>
+                                    <tr>
+                                        <td>j sainsbury plc</td>
+                                        <td>sbry</td>
+                                        <td>uk</td>
+                                        <td>gbp</td>
+                                        <td>0.0001</td>
+                                        <td>1</td>
+                                        <td>10000</td>
+                                        <td>1:50</td>
+                                        <td>1</td>
+                                        <td>7:15</td>
+                                        <td>15:15</td>
+                                    </tr>
+                                    <tr>
+                                        <td>starbucks corporation</td>
+                                        <td>sbux</td>
+                                        <td>usa</td>
+                                        <td>usd</td>
+                                        <td>0.01</td>
+                                        <td>1</td>
+                                        <td>10000</td>
+                                        <td>1:50</td>
+                                        <td>1</td>
+                                        <td>13:45</td>
+                                        <td>19:45</td>
+                                    </tr>
+                                    <tr>
+                                        <td>gazprom neft</td>
+                                        <td>sibn</td>
+                                        <td>russia</td>
+                                        <td>rub</td>
+                                        <td>0.01</td>
+                                        <td>1</td>
+                                        <td>100</td>
+                                        <td>1:50</td>
+                                        <td>10</td>
+                                        <td>7:15</td>
+                                        <td>14:15</td>
+                                    </tr>
+                                    <tr>
+                                        <td>siemens</td>
+                                        <td>sie</td>
+                                        <td>germany</td>
+                                        <td>eur</td>
+                                        <td>0.001</td>
+                                        <td>1</td>
+                                        <td>10000</td>
+                                        <td>1:50</td>
+                                        <td>1</td>
+                                        <td>7:15</td>
+                                        <td>15:15</td>
+                                    </tr>
+                                    <tr>
+                                        <td>schneider electric</td>
+                                        <td>su</td>
+                                        <td>france</td>
+                                        <td>eur</td>
+                                        <td>0.01</td>
+                                        <td>1</td>
+                                        <td>10000</td>
+                                        <td>1:50</td>
+                                        <td>1</td>
+                                        <td>7:15</td>
+                                        <td>15:15</td>
+                                    </tr>
+                                    <tr>
+                                        <td>at&amp;t inc</td>
+                                        <td>t</td>
+                                        <td>usa</td>
+                                        <td>usd</td>
+                                        <td>0.01</td>
+                                        <td>1</td>
+                                        <td>10000</td>
+                                        <td>1:50</td>
+                                        <td>1</td>
+                                        <td>13:45</td>
+                                        <td>19:45</td>
+                                    </tr>
+                                    <tr>
+                                        <td>telefonica sa</td>
+                                        <td>tefbm</td>
+                                        <td>spain</td>
+                                        <td>eur</td>
+                                        <td>0.001</td>
+                                        <td>1</td>
+                                        <td>10000</td>
+                                        <td>1:50</td>
+                                        <td>1</td>
+                                        <td>7:15</td>
+                                        <td>15:15</td>
+                                    </tr>
+                                    <tr>
+                                        <td>tesco plc</td>
+                                        <td>tsco</td>
+                                        <td>uk</td>
+                                        <td>gbp</td>
+                                        <td>0.0001</td>
+                                        <td>1</td>
+                                        <td>10000</td>
+                                        <td>1:50</td>
+                                        <td>1</td>
+                                        <td>7:15</td>
+                                        <td>15:15</td>
+                                    </tr>
+                                    <tr>
+                                        <td>tesla</td>
+                                        <td>tsla</td>
+                                        <td>usa</td>
+                                        <td>usd</td>
+                                        <td>0.01</td>
+                                        <td>1</td>
+                                        <td>10000</td>
+                                        <td>1:50</td>
+                                        <td>1</td>
+                                        <td>13:45</td>
+                                        <td>19:45</td>
+                                    </tr>
+                                    <tr>
+                                        <td>peugeot</td>
+                                        <td>ug</td>
+                                        <td>france</td>
+                                        <td>eur</td>
+                                        <td>0.01</td>
+                                        <td>1</td>
+                                        <td>10000</td>
+                                        <td>1:50</td>
+                                        <td>1</td>
+                                        <td>7:15</td>
+                                        <td>15:15</td>
+                                    </tr>
+                                    <tr>
+                                        <td>united parcel service inc</td>
+                                        <td>ups</td>
+                                        <td>usa</td>
+                                        <td>usd</td>
+                                        <td>0.01</td>
+                                        <td>1</td>
+                                        <td>10000</td>
+                                        <td>1:50</td>
+                                        <td>1</td>
+                                        <td>13:45</td>
+                                        <td>19:45</td>
+                                    </tr>
+                                    <tr>
+                                        <td>uralkaliy</td>
+                                        <td>urka</td>
+                                        <td>russia</td>
+                                        <td>rub</td>
+                                        <td>0.01</td>
+                                        <td>1</td>
+                                        <td>1000</td>
+                                        <td>1:50</td>
+                                        <td>1</td>
+                                        <td>7:15</td>
+                                        <td>14:15</td>
+                                    </tr>
+                                    <tr>
+                                        <td>united technologies corporation</td>
+                                        <td>utx</td>
+                                        <td>usa</td>
+                                        <td>usd</td>
+                                        <td>0.01</td>
+                                        <td>1</td>
+                                        <td>10000</td>
+                                        <td>1:50</td>
+                                        <td>1</td>
+                                        <td>13:45</td>
+                                        <td>19:45</td>
+                                    </tr>
+                                    <tr>
+                                        <td>visa inc</td>
+                                        <td>v</td>
+                                        <td>usa</td>
+                                        <td>usd</td>
+                                        <td>0.01</td>
+                                        <td>1</td>
+                                        <td>10000</td>
+                                        <td>1:50</td>
+                                        <td>1</td>
+                                        <td>13:45</td>
+                                        <td>19:45</td>
+                                    </tr>
+                                    <tr>
+                                        <td>volkswagen</td>
+                                        <td>vow3</td>
+                                        <td>germany</td>
+                                        <td>eur</td>
+                                        <td>0.001</td>
+                                        <td>1</td>
+                                        <td>10000</td>
+                                        <td>1:50</td>
+                                        <td>1</td>
+                                        <td>7:15</td>
+                                        <td>15:15</td>
+                                    </tr>
+                                    <tr>
+                                        <td>vtb bank</td>
+                                        <td>vtbr</td>
+                                        <td>russia</td>
+                                        <td>rub</td>
+                                        <td>0.005</td>
+                                        <td>1</td>
+                                        <td>1000</td>
+                                        <td>1:50</td>
+                                        <td>1</td>
+                                        <td>7:15</td>
+                                        <td>14:15</td>
+                                    </tr>
+                                    <tr>
+                                        <td>verizon communications inc</td>
+                                        <td>vz</td>
+                                        <td>usa</td>
+                                        <td>usd</td>
+                                        <td>0.01</td>
+                                        <td>1</td>
+                                        <td>10000</td>
+                                        <td>1:50</td>
+                                        <td>1</td>
+                                        <td>13:45</td>
+                                        <td>19:45</td>
+                                    </tr>
+                                    <tr>
+                                        <td>wells fargo &amp; company</td>
+                                        <td>wfc</td>
+                                        <td>usa</td>
+                                        <td>usd</td>
+                                        <td>0.01</td>
+                                        <td>1</td>
+                                        <td>10000</td>
+                                        <td>1:50</td>
+                                        <td>1</td>
+                                        <td>13:45</td>
+                                        <td>19:45</td>
+                                    </tr>
+                                    <tr>
+                                        <td>wal-mart stores inc</td>
+                                        <td>wmt</td>
+                                        <td>usa</td>
+                                        <td>usd</td>
+                                        <td>0.01</td>
+                                        <td>1</td>
+                                        <td>10000</td>
+                                        <td>1:50</td>
+                                        <td>1</td>
+                                        <td>13:45</td>
+                                        <td>19:45</td>
+                                    </tr>
+                                    <tr>
+                                        <td>exxon mobil corporation</td>
+                                        <td>xom</td>
+                                        <td>usa</td>
+                                        <td>usd</td>
+                                        <td>0.01</td>
+                                        <td>1</td>
+                                        <td>10000</td>
+                                        <td>1:50</td>
+                                        <td>1</td>
+                                        <td>13:45</td>
+                                        <td>19:45</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div data-id="commodities" class="tab-info">
+                            <div class="table-wrap">
+                                <table>
+                                    <thead>
+                                    <tr>
+                                        <th>Заголовок</th>
+                                        <th>Инструмент</th>
+                                        <th>Мин. изменение цены</th>
+                                        <th>Мин. размер лота</th>
+                                        <th>Макс. размер лота</th>
+                                        <th>Volume pitch</th>
+                                        <th>Макс. плечо</th>
+                                        <th>Количество контрактов на 1 лот</th>
+                                        <th>Открытие*</th>
+                                        <th>Закрытие*</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>brent crude oil</td>
+                                        <td>brent</td>
+                                        <td>0.01</td>
+                                        <td>1</td>
+                                        <td>100000</td>
+                                        <td>1</td>
+                                        <td>1 : 100</td>
+                                        <td>1</td>
+                                        <td>0:15</td>
+                                        <td>20:45</td>
+                                    </tr>
+                                    <tr>
+                                        <td>natural gas</td>
+                                        <td>ng</td>
+                                        <td>0.001</td>
+                                        <td>1</td>
+                                        <td>100000</td>
+                                        <td>1</td>
+                                        <td>1 : 100</td>
+                                        <td>1</td>
+                                        <td>0:15</td>
+                                        <td>20:45</td>
+                                    </tr>
+                                    <tr>
+                                        <td>wti crude oil</td>
+                                        <td>wti</td>
+                                        <td>0.01</td>
+                                        <td>1</td>
+                                        <td>100000</td>
+                                        <td>1</td>
+                                        <td>1 : 100</td>
+                                        <td>1</td>
+                                        <td>0:15</td>
+                                        <td>20:45</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div data-id="etf" class="tab-info">
+                            <div class="table-wrap">
+                                <table>
+                                    <thead>
+                                    <tr>
+                                        <th>Заголовок</th>
+                                        <th>Инструмент</th>
+                                        <th>Мин. изменение цены</th>
+                                        <th>Мин. размер лота</th>
+                                        <th>Макс. размер лота</th>
+                                        <th>Макс. плечо</th>
+                                        <th>Количество контрактов на 1 лот</th>
+                                        <th>Открытие*</th>
+                                        <th>Закрытие*</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>ipatd s&amp;p 500</td>
+                                        <td>vxx</td>
+                                        <td>0.01</td>
+                                        <td>1</td>
+                                        <td>10000</td>
+                                        <td>1 : 50</td>
+                                        <td>1</td>
+                                        <td>8:15</td>
+                                        <td>20:45</td>
+                                    </tr>
+                                    <tr>
+                                        <td>samsung</td>
+                                        <td>smsn</td>
+                                        <td>0.5</td>
+                                        <td>1</td>
+                                        <td>10000</td>
+                                        <td>1 : 50</td>
+                                        <td>1</td>
+                                        <td>7:15</td>
+                                        <td>14:15</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="market-page__third__content__otherinfo">
+                    <span>* часы закрытия и открытия торгов указаны по UTC+0</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../menu.js"></script>
+    <script src="../tabs.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs="
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.20/sc-2.0.1/datatables.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('table').DataTable({
+                "scrollY": "400px",
+                "scrollX": true,
+                "paging": false,
+                "searching": false,
+                "info": false,
+                "ordering": false
+            });
+        });
+    </script>
+</body>
