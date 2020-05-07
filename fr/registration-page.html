@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="../styles.css">
+    <title>Регистрация</title>
+</head>
+<body>
+    <header class="header" id="navbar">
+        <div class="header__content">
+            <div class="header__content__block">
+                <div>
+                    <a href="index.html"><img src="../assets/images/header/logo.svg"></a>
+                </div>
+                <div class="header__language">
+                    <img src="../assets/images/header/planet.svg"/>
+                    <span>RU</span>
+                    <div class="header__language__arrow"></div>
+                    <div class="header__language__select">
+                        <ul>
+                            <a href="../ru/registration.html"><li>Русский</li></a>
+                            <a href="../en/registration.html"><li>English</li></a>
+                            <a href="../es/registration.html"><li>Espanol</li></a>
+                            <a href="../de/registration.html"><li>Deutsch</li></a>
+                            <a href="../fr/registration.html"><li>Français</li></a>
+                            <a href="../ch/registration.html"><li>中国人</li></a>
+                            <a href="../it/registration.html"><li>Italiano</li></a>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <nav class="header__content__block">
+                <button class="header__content__block__button" onclick="location.href='signin.html'"><img src="../assets/images/header/doorsignin.svg">Connexion</button>
+                <button class="brand-button desktop-visible" onclick="location.href='registration.html'">Enregistrement</button>
+                <div class="header__content__block__centering menu">
+                    <div id="overlay"></div>
+                    <div class="menu__burger">
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="menu__content">
+                        <ul>
+                            <li><a href="index.html">Главная</a></li>
+                            <li><a href="market.html">Рынки</a></li>
+                            <li><a href="company.html">О компании</a></li>
+                            <li><a href="support.html">Контакты</a></li>
+                        </ul>
+                        <button class="brand-button" onclick="location.href='registration.html'">{88}</button>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <div class="registration-page">
+        <div class="registration-page__first">
+            <div class="registration-page__first__content">
+                <h1>Enregistrement</h1>
+                <h3>Entrez le mot de passe. Nous recommandons un minimum d'un chiffre, d'un caractère et d'une lettre majuscule. Le mot de passe doit comporter plus de 8 caractères.</h3>
+                <div class="registration-page__first__content__blocks">
+                    <div class="registration-page__first__content__blocks__element">
+                        <img src="../assets/images/registration/name.svg">
+                        <input type="text" placeholder=Entrez votre nom>
+                    </div>
+                    <div class="registration-page__first__content__blocks__element">
+                        <img src="../assets/images/registration/mail.svg">
+                        <input type="text" placeholder=Entrez votre adresse électronique> 
+                    </div>
+                    <div class="registration-page__first__content__blocks__element">
+                        <img src="../assets/images/registration/password.svg">
+                        <input type="text" placeholder="Entrez le mot de passe">
+                        <img class="registration-page__first__content__blocks__element__eye" src="../assets/images/registration/ward.svg">
+                    </div>
+                    <div class="registration-page__first__content__blocks__element">
+                        <img src="../assets/images/registration/password.svg">
+                        <input type="text" placeholder=Confirmer le mot de passe>
+                        <img class="registration-page__first__content__blocks__element__eye" src="../assets/images/registration/ward.svg">
+                    </div>
+                    <div class="registration-page__first__content__blocks__element">
+                        <img src="../assets/images/registration/phone.svg">
+                        <input type="text" placeholder=Champ de saisie du numéro de téléphone>
+                    </div>
+                    <div class="registration-page__first__content__blocks__element">
+                        <img src="../assets/images/registration/promo.svg">
+                        <input type="text" placeholder=Entrez le code promotionnel>
+                    </div>
+                </div>
+                <span><b>* </b>Поля, обязательные для заполнения</span>
+                <button class="brand-button">Enregistrement</button>
+                <div class="registration-page__first__content__choice">
+                    <a href="">Vous avez oublié votre mot de passe?</a>
+                    <a href="signin.html">Vous avez déjà un compte</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../menu.js"></script>
+</body>
