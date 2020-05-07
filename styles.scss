@@ -1994,9 +1994,13 @@ a {
         &__content {
             display: flex;
             flex-direction: row;
-            margin-top: 8em;
+            margin-top: 4em;
             text-align: left;
             padding-bottom: 2em;
+
+            @media screen and (min-width: $media-medium) {
+                margin-top: 8em;
+            }
 
             &__firstblock {
                 margin-top: 5em;
