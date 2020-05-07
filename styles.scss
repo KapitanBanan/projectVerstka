@@ -407,7 +407,7 @@ a {
     overflow: auto;
     background: rgba(0,0,0,0.4); /* полупрозрачный цвет фона */
     z-index:100; /* выводим фон поверх всех слоев на странице браузера */
-    display: none; /* Делаем невидимым */
+    display: block; /* Делаем невидимым */
     // pointer-events: none; /* элемент невидим для событий мыши */
     
     &:target {
@@ -425,6 +425,10 @@ a {
         overflow: auto;
         pointer-events: auto;
 
+        @media screen and (min-width: $media-large) {
+            width: 450px;
+        }
+
         h2 {
             padding-top: 2em ;
             text-align: center;
@@ -441,6 +445,22 @@ a {
             margin-top: 1em;
         }
 
+        button {
+            margin-top: 1em;
+            width: 100%;
+            height: 3.4rem;
+            border-radius: 1.7rem;
+            border: none;
+            color: $stylest-color;
+            font-size: 12px;
+            background-color: $buttonborder-color;
+            box-shadow: 0 6px 15px rgba(61, 193, 0, 0.3);
+
+            @media screen and (min-width: $media-medium) {
+                font-size: 14px;
+            }
+        }
+        
         &__remark {
             margin-top: 1em;
             margin-bottom: 3.5em;
@@ -2369,6 +2389,11 @@ a {
                         margin-left: 0.8em;
                         border: none;
                         outline: none;
+                        width: 250px;
+
+                        @media screen and (min-width: $media-medium) {
+                            width: 300px;
+                        }
                     }
 
                     &__eye {
