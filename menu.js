@@ -6,7 +6,7 @@ window.onscroll = function() {
     } else {
       document.getElementById("navbar").classList.remove('solid');
     }
-  }
+  };
 
 document.querySelector('.menu__burger').addEventListener('click', function(e) {
   e.currentTarget.parentElement.classList.toggle('opened');
@@ -20,4 +20,8 @@ document.querySelector('.menu__burger').addEventListener('click', function(e) {
   if (!isOpening && window.pageYOffset < offsetNavbarTransparent) {
     navbar.classList.remove('solid');
   }
-})
+});
+
+document.querySelector('.header__language').addEventListener('click', function(e) {
+  e.currentTarget.classList.toggle('opened');
+});
