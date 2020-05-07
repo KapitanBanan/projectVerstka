@@ -61,40 +61,42 @@
             <div class="registration-page__first__content">
                 <h1>Enregistrement</h1>
                 <h3>Entrez le mot de passe. Nous recommandons un minimum d'un chiffre, d'un caractère et d'une lettre majuscule. Le mot de passe doit comporter plus de 8 caractères.</h3>
-                <div class="registration-page__first__content__blocks">
-                    <div class="registration-page__first__content__blocks__element">
-                        <img src="../assets/images/registration/name.svg">
-                        <input type="text" placeholder="Entrez votre nom">
+                <form class="registration-form" id="form" method="POST">
+                    <div class="registration-page__first__content__blocks">
+                        <div class="registration-page__first__content__blocks__element">
+                            <img src="../assets/images/registration/name.svg">
+                            <input type="text" placeholder="Entrez votre nom*">
+                        </div>
+                        <div class="registration-page__first__content__blocks__element">
+                            <img src="../assets/images/registration/mail.svg">
+                            <input type="email" placeholder="Entrez votre adresse électronique*"> 
+                        </div>
+                        <div class="registration-page__first__content__blocks__element">
+                            <img src="../assets/images/registration/password.svg">
+                            <input type="password" placeholder="Entrez le mot de passe*">
+                            <img class="registration-page__first__content__blocks__element__eye" src="../assets/images/registration/ward.svg">
+                        </div>
+                        <div class="registration-page__first__content__blocks__element">
+                            <img src="../assets/images/registration/password.svg">
+                            <input type="password" placeholder="Confirmer le mot de passe*">
+                            <img class="registration-page__first__content__blocks__element__eye" src="../assets/images/registration/ward.svg">
+                        </div>
+                        <div class="registration-page__first__content__blocks__element">
+                            <img src="../assets/images/registration/phone.svg">
+                            <input type="text" placeholder="Champ de saisie du numéro de téléphone*">
+                        </div>
+                        <div class="registration-page__first__content__blocks__element">
+                            <img src="../assets/images/registration/promo.svg">
+                            <input type="text" placeholder="Entrez le code promotionnel">
+                        </div>
                     </div>
-                    <div class="registration-page__first__content__blocks__element">
-                        <img src="../assets/images/registration/mail.svg">
-                        <input type="text" placeholder="Entrez votre adresse électronique"> 
+                    <span><b>* </b>Поля, обязательные для заполнения</span>
+                    <button type="submit" class="brand-button">Enregistrement</button>
+                    <div class="registration-page__first__content__choice">
+                        <a href="">Vous avez oublié votre mot de passe?</a>
+                        <a href="signin.html">Vous avez déjà un compte</a>
                     </div>
-                    <div class="registration-page__first__content__blocks__element">
-                        <img src="../assets/images/registration/password.svg">
-                        <input type="text" placeholder="Entrez le mot de passe">
-                        <img class="registration-page__first__content__blocks__element__eye" src="../assets/images/registration/ward.svg">
-                    </div>
-                    <div class="registration-page__first__content__blocks__element">
-                        <img src="../assets/images/registration/password.svg">
-                        <input type="text" placeholder="Confirmer le mot de passe">
-                        <img class="registration-page__first__content__blocks__element__eye" src="../assets/images/registration/ward.svg">
-                    </div>
-                    <div class="registration-page__first__content__blocks__element">
-                        <img src="../assets/images/registration/phone.svg">
-                        <input type="text" placeholder="Champ de saisie du numéro de téléphone">
-                    </div>
-                    <div class="registration-page__first__content__blocks__element">
-                        <img src="../assets/images/registration/promo.svg">
-                        <input type="text" placeholder="Entrez le code promotionnel">
-                    </div>
-                </div>
-                <span><b>* </b>Поля, обязательные для заполнения</span>
-                <button class="brand-button">Enregistrement</button>
-                <div class="registration-page__first__content__choice">
-                    <a href="">Vous avez oublié votre mot de passe?</a>
-                    <a href="signin.html">Vous avez déjà un compte</a>
-                </div>
+                </form>
             </div>
         </div>
     </div>

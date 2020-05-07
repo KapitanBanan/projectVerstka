@@ -61,40 +61,42 @@
             <div class="registration-page__first__content">
                 <h1>Registro</h1>
                 <h3>Introduzca la contraseña. Recomendamos un mínimo de un número, un carácter y una letra mayúscula. La contraseña debe tener más de 8 caracteres.</h3>
-                <div class="registration-page__first__content__blocks">
-                    <div class="registration-page__first__content__blocks__element">
-                        <img src="../assets/images/registration/name.svg">
-                        <input type="text" placeholder="Escriba su nombre">
+                <form class="registration-form" id="form" method="POST">
+                    <div class="registration-page__first__content__blocks">
+                        <div class="registration-page__first__content__blocks__element">
+                            <img src="../assets/images/registration/name.svg">
+                            <input type="text" placeholder="Escriba su nombre*">
+                        </div>
+                        <div class="registration-page__first__content__blocks__element">
+                            <img src="../assets/images/registration/mail.svg">
+                            <input type="email" placeholder="Ingrese su correo electrónico*"> 
+                        </div>
+                        <div class="registration-page__first__content__blocks__element">
+                            <img src="../assets/images/registration/password.svg">
+                            <input type="password" placeholder="Introduzca la contraseña*">
+                            <img class="registration-page__first__content__blocks__element__eye" src="../assets/images/registration/ward.svg">
+                        </div>
+                        <div class="registration-page__first__content__blocks__element">
+                            <img src="../assets/images/registration/password.svg">
+                            <input type="password" placeholder="Confirme la contraseña*">
+                            <img class="registration-page__first__content__blocks__element__eye" src="../assets/images/registration/ward.svg">
+                        </div>
+                        <div class="registration-page__first__content__blocks__element">
+                            <img src="../assets/images/registration/phone.svg">
+                            <input type="text" placeholder="Campo para introducir el número de teléfono*">
+                        </div>
+                        <div class="registration-page__first__content__blocks__element">
+                            <img src="../assets/images/registration/promo.svg">
+                            <input type="text" placeholder="Introduce el código de promoción">
+                        </div>
                     </div>
-                    <div class="registration-page__first__content__blocks__element">
-                        <img src="../assets/images/registration/mail.svg">
-                        <input type="text" placeholder="Ingrese su correo electrónico"> 
+                    <span><b>* </b>Поля, обязательные для заполнения</span>
+                    <button type="submit" class="brand-button">Registro</button>
+                    <div class="registration-page__first__content__choice">
+                        <a href="">Olvidó su contraseña?</a>
+                        <a href="signin.html">Ya tengo una cuenta.</a>
                     </div>
-                    <div class="registration-page__first__content__blocks__element">
-                        <img src="../assets/images/registration/password.svg">
-                        <input type="text" placeholder="Introduzca la contraseña">
-                        <img class="registration-page__first__content__blocks__element__eye" src="../assets/images/registration/ward.svg">
-                    </div>
-                    <div class="registration-page__first__content__blocks__element">
-                        <img src="../assets/images/registration/password.svg">
-                        <input type="text" placeholder="Confirme la contraseña">
-                        <img class="registration-page__first__content__blocks__element__eye" src="../assets/images/registration/ward.svg">
-                    </div>
-                    <div class="registration-page__first__content__blocks__element">
-                        <img src="../assets/images/registration/phone.svg">
-                        <input type="text" placeholder="Campo para introducir el número de teléfono">
-                    </div>
-                    <div class="registration-page__first__content__blocks__element">
-                        <img src="../assets/images/registration/promo.svg">
-                        <input type="text" placeholder="Introduce el código de promoción">
-                    </div>
-                </div>
-                <span><b>* </b>Поля, обязательные для заполнения</span>
-                <button class="brand-button">Registro</button>
-                <div class="registration-page__first__content__choice">
-                    <a href="">Olvidó su contraseña?</a>
-                    <a href="signin.html">Ya tengo una cuenta.</a>
-                </div>
+                </form>
             </div>
         </div>
     </div>

@@ -59,19 +59,21 @@
     <div class="signin-page">
         <div class="signin-page__first">
             <div class="signin-page__first__content">
-                <h1>Вход в личный кабинет</h1>
-                <div class="signin-page__first__content__blocks">
-                    <div class="signin-page__first__content__blocks__element">
-                        <img src="../assets/images/registration/mail.svg">
-                        <input type="text" placeholder="${119}"> 
+                <form action="POST">
+                    <h1>Вход в личный кабинет</h1>
+                    <div class="signin-page__first__content__blocks">
+                        <div class="signin-page__first__content__blocks__element">
+                            <img src="../assets/images/registration/mail.svg">
+                            <input type="text" placeholder="${119}"> 
+                        </div>
+                        <div class="signin-page__first__content__blocks__element error">
+                            <img src="../assets/images/registration/password.svg">
+                            <input type="text" placeholder="${120}">
+                            <img class="signin-page__first__content__blocks__element__eye" src="../assets/images/registration/ward.svg">
+                        </div>
                     </div>
-                    <div class="signin-page__first__content__blocks__element error">
-                        <img src="../assets/images/registration/password.svg">
-                        <input type="text" placeholder="${120}">
-                        <img class="signin-page__first__content__blocks__element__eye" src="../assets/images/registration/ward.svg">
-                    </div>
-                </div>
-                <button>Войти</button>
+                    <button type="submit">Войти</button>
+                </form>
                 <div class="signin-page__first__content__choice">
                     <a href="">${124}</a>
                     <a href="registration.html">${88}</a>

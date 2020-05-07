@@ -61,40 +61,42 @@
             <div class="registration-page__first__content">
                 <h1>${88}</h1>
                 <h3>${117}</h3>
-                <div class="registration-page__first__content__blocks">
-                    <div class="registration-page__first__content__blocks__element">
-                        <img src="../assets/images/registration/name.svg">
-                        <input type="text" placeholder="${118}">
+                <form class="registration-form" id="form" method="POST">
+                    <div class="registration-page__first__content__blocks">
+                        <div class="registration-page__first__content__blocks__element">
+                            <img src="../assets/images/registration/name.svg">
+                            <input type="text" placeholder="${118}*">
+                        </div>
+                        <div class="registration-page__first__content__blocks__element">
+                            <img src="../assets/images/registration/mail.svg">
+                            <input type="email" placeholder="${119}*"> 
+                        </div>
+                        <div class="registration-page__first__content__blocks__element">
+                            <img src="../assets/images/registration/password.svg">
+                            <input type="password" placeholder="${120}*">
+                            <img class="registration-page__first__content__blocks__element__eye" src="../assets/images/registration/ward.svg">
+                        </div>
+                        <div class="registration-page__first__content__blocks__element">
+                            <img src="../assets/images/registration/password.svg">
+                            <input type="password" placeholder="${121}*">
+                            <img class="registration-page__first__content__blocks__element__eye" src="../assets/images/registration/ward.svg">
+                        </div>
+                        <div class="registration-page__first__content__blocks__element">
+                            <img src="../assets/images/registration/phone.svg">
+                            <input type="text" placeholder="${122}*">
+                        </div>
+                        <div class="registration-page__first__content__blocks__element">
+                            <img src="../assets/images/registration/promo.svg">
+                            <input type="text" placeholder="${123}">
+                        </div>
                     </div>
-                    <div class="registration-page__first__content__blocks__element">
-                        <img src="../assets/images/registration/mail.svg">
-                        <input type="text" placeholder="${119}"> 
+                    <span><b>* </b>Поля, обязательные для заполнения</span>
+                    <button type="submit" class="brand-button">${88}</button>
+                    <div class="registration-page__first__content__choice">
+                        <a href="">${124}</a>
+                        <a href="signin.html">${125}</a>
                     </div>
-                    <div class="registration-page__first__content__blocks__element">
-                        <img src="../assets/images/registration/password.svg">
-                        <input type="text" placeholder="${120}">
-                        <img class="registration-page__first__content__blocks__element__eye" src="../assets/images/registration/ward.svg">
-                    </div>
-                    <div class="registration-page__first__content__blocks__element">
-                        <img src="../assets/images/registration/password.svg">
-                        <input type="text" placeholder="${121}">
-                        <img class="registration-page__first__content__blocks__element__eye" src="../assets/images/registration/ward.svg">
-                    </div>
-                    <div class="registration-page__first__content__blocks__element">
-                        <img src="../assets/images/registration/phone.svg">
-                        <input type="text" placeholder="${122}">
-                    </div>
-                    <div class="registration-page__first__content__blocks__element">
-                        <img src="../assets/images/registration/promo.svg">
-                        <input type="text" placeholder="${123}">
-                    </div>
-                </div>
-                <span><b>* </b>Поля, обязательные для заполнения</span>
-                <button class="brand-button">${88}</button>
-                <div class="registration-page__first__content__choice">
-                    <a href="">${124}</a>
-                    <a href="signin.html">${125}</a>
-                </div>
+                </form>
             </div>
         </div>
     </div>

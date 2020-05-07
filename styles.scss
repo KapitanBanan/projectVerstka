@@ -407,8 +407,12 @@ a {
     overflow: auto;
     background: rgba(0,0,0,0.4); /* полупрозрачный цвет фона */
     z-index:100; /* выводим фон поверх всех слоев на странице браузера */
-    display: block; /* Делаем невидимым */
+    display: none; /* Делаем невидимым */
     // pointer-events: none; /* элемент невидим для событий мыши */
+
+    &.opened {
+        display: block;
+    }
     
     &:target {
         display: block;
@@ -478,6 +482,7 @@ a {
             position: absolute;
             right: 23px;
             display: block;
+            cursor: pointer;
         }
 
         &__blocks {
@@ -513,6 +518,7 @@ a {
                     margin-left: 0.8em;
                     border: none;
                     outline: none;
+                    width: 70%;
                 }
 
                 &__eye {
