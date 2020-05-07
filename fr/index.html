@@ -450,7 +450,6 @@
             slidesPerView: 1,
             speed: 400,
             grabCursor: true,
-            loop: true,
             pagination: {
                 el: '.banner-swiper-pagination',
                 type: 'bullets',
@@ -460,9 +459,9 @@
                 nextEl: '.banner-swiper-button-next',
                 prevEl: '.banner-swiper-button-prev',
             },
-            // autoplay: {
-            //     delay: 5000,
-            // }
+            autoplay: {
+                delay: 5000,
+            }
         });
         bannerSwiper.on('slideChange', function () {
             var index = bannerSwiper.activeIndex % 4 + 1;

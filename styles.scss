@@ -544,17 +544,27 @@ a {
 
         &__controller {
             left: 0;
-            right: 0;
             position: absolute;
-            bottom: 0;
-            width: 100%;
+            bottom: 50px;
+            width: 375px;
             height: 100px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             // position: absolute;
             // bottom: -200px;
             // width: 375px;
 
+            @media screen and (min-width: $media-large) {
+                width: 370px;
+                padding-left: 1.2em;
+                box-sizing: content-box;
+            }
+
             @media screen and (min-width: $media-extra-large) {
-                @include padding-x-large();
+                box-sizing: content-box;
+                padding-left: calc((100% - #{$max-width})/2);
+                width: 630px;
             }
 
             > span {
@@ -576,18 +586,43 @@ a {
                 height: 60px;
                 border-radius: 30px;
                 background-color: white;
-                border: 8px solid #3EC100;
+                background-size: 110%;
+                background-position: -2px -1px;
+                border: 6px solid #2d4822;
+                opacity: 0.6;
+
+                &-active {
+                    border: 6px solid #246305;
+                    opacity: 1;
+                }
+
+                &:nth-child(1) {
+                    background-image: url(assets/images/main/first/c1.png);
+                }
+                &:nth-child(2) {
+                    background-image: url(assets/images/main/first/c2.png);
+                }
+                &:nth-child(3) {
+                    background-image: url(assets/images/main/first/c3.png);
+                }
+                &:nth-child(4) {
+                    background-image: url(assets/images/main/first/c4.png);
+                }
+            }
+
+            .swiper-pagination-bullet + .swiper-pagination-bullet {
                 margin-left: 1em;
             }
 
             .banner-swiper-button-prev, .banner-swiper-button-next {
                 display: inline-block;
-                color: $brand-color;
+                color: white;
                 left: unset;
                 right: unset;
                 top: unset;
                 bottom: unset;
                 position: relative;
+                margin-top: 0;
             }
         }
     }
