@@ -63,7 +63,7 @@
                     <h1>${498}</h1>
                     <hr>
                     <h4>${53}</h4>
-                    <button onclick="location.href='#openmodal'">
+                    <button class="button-open-modal-background">
                         <div>
                             <img src="../assets/images/support/first/phone.svg">${93}
                         </div>
@@ -74,45 +74,47 @@
                 <div class="modal-background">
                     <div class="modal-background__modalwindow">
                         <img class="modal-background__modalwindow__close" src="../assets/images/modalwindow/close.svg">
-                        <h2>Оставьте заявку</h2>
-                        <hr class="modal-background__modalwindow__line">
-                        <div class="modal-background__modalwindow__blocks">
-                            <div class="modal-background__modalwindow__blocks__element">
-                                <img src="../assets/images/modalwindow/name.svg">
-                                <input type="text" placeholder="${99}">
+                        <form action="POST">
+                            <h2>Оставьте заявку</h2>
+                            <hr class="modal-background__modalwindow__line">
+                            <div class="modal-background__modalwindow__blocks">
+                                <div class="modal-background__modalwindow__blocks__element">
+                                    <img src="../assets/images/modalwindow/name.svg">
+                                    <input type="text" placeholder="${99}*">
+                                </div>
+                                <div class="modal-background__modalwindow__blocks__errortext hidden">Это поле необходимо заполнить</div>
+                                <div class="modal-background__modalwindow__blocks__element error">
+                                    <img src="../assets/images/modalwindow/surname.svg">
+                                    <input type="text" placeholder="${100}*"> 
+                                </div>
+                                <div class="modal-background__modalwindow__blocks__errortext">Это поле необходимо заполнить</div>
+                                <div class="modal-background__modalwindow__blocks__element">
+                                    <img src="../assets/images/modalwindow/phone.svg">
+                                    <input type="text" placeholder="${101}*">
+                                </div>
+                                <div class="modal-background__modalwindow__blocks__errortext hidden">Это поле необходимо заполнить</div>
+                                <div class="modal-background__modalwindow__blocks__element">
+                                    <img src="../assets/images/modalwindow/mail.svg">
+                                    <input type="email" placeholder="${102}*">
+                                </div>
+                                <div class="modal-background__modalwindow__blocks__errortext hidden">Это поле необходимо заполнить</div>
+                                <div class="modal-background__modalwindow__blocks__element">
+                                    <img src="../assets/images/modalwindow/country.svg">
+                                    <input type="text" placeholder="${103}*">
+                                </div>
+                                <div class="modal-background__modalwindow__blocks__errortext hidden">Это поле необходимо заполнить</div>
+                                <div class="modal-background__modalwindow__blocks__element">
+                                    <img src="../assets/images/modalwindow/language.svg">
+                                    <input type="text" placeholder="${104}*">
+                                </div>
+                                <div class="modal-background__modalwindow__blocks__errortext hidden">Это поле необходимо заполнить</div>
+                                <div class="modal-background__modalwindow__blocks__element">
+                                    <img src="../assets/images/modalwindow/clock.svg">
+                                    <input type="text" placeholder="${105}">
+                                </div>
                             </div>
-                            <div class="modal-background__modalwindow__blocks__errortext hidden">Это поле необходимо заполнить</div>
-                            <div class="modal-background__modalwindow__blocks__element error">
-                                <img src="../assets/images/modalwindow/surname.svg">
-                                <input type="text" placeholder="${100}"> 
-                            </div>
-                            <div class="modal-background__modalwindow__blocks__errortext">Это поле необходимо заполнить</div>
-                            <div class="modal-background__modalwindow__blocks__element">
-                                <img src="../assets/images/modalwindow/phone.svg">
-                                <input type="text" placeholder="${101}">
-                            </div>
-                            <div class="modal-background__modalwindow__blocks__errortext hidden">Это поле необходимо заполнить</div>
-                            <div class="modal-background__modalwindow__blocks__element">
-                                <img src="../assets/images/modalwindow/mail.svg">
-                                <input type="text" placeholder="${102}">
-                            </div>
-                            <div class="modal-background__modalwindow__blocks__errortext hidden">Это поле необходимо заполнить</div>
-                            <div class="modal-background__modalwindow__blocks__element">
-                                <img src="../assets/images/modalwindow/country.svg">
-                                <input type="text" placeholder="${103}">
-                            </div>
-                            <div class="modal-background__modalwindow__blocks__errortext hidden">Это поле необходимо заполнить</div>
-                            <div class="modal-background__modalwindow__blocks__element">
-                                <img src="../assets/images/modalwindow/language.svg">
-                                <input type="text" placeholder="${104}">
-                            </div>
-                            <div class="modal-background__modalwindow__blocks__errortext hidden">Это поле необходимо заполнить</div>
-                            <div class="modal-background__modalwindow__blocks__element">
-                                <img src="../assets/images/modalwindow/clock.svg">
-                                <input type="text" placeholder="${105}">
-                            </div>
-                        </div>
-                        <button class="brand-button">Отправить</button>
+                            <button type="submit" class="brand-button">Отправить</button>
+                        </form>
                         <div class="modal-background__modalwindow__remark"><b>* </b>${141}</div>
                     </div>
                 </div>
@@ -154,4 +156,19 @@
     </div>
 
     <script src="../menu.js"></script>
+    <script>
+        var closeModal = function(e) {
+            if (e.target !== this)
+                return;
+            document.querySelector('.modal-background').classList.remove('opened');
+        };
+        document.querySelector('.modal-background__modalwindow__close').
+            addEventListener('click', closeModal);
+        document.querySelector('.modal-background').
+            addEventListener('click', closeModal);
+        document.querySelector('.button-open-modal-background').
+            addEventListener('click', function(e) {
+                document.querySelector('.modal-background').classList.add('opened');
+        });
+    </script>
 </body>    
