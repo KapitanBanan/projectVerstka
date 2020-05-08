@@ -168,12 +168,12 @@ a {
             width: 10px;
             background-repeat: no-repeat;
             height: 5px;
-            background-image: url("../assets/images/header/arrow.svg");
+            background-image: url("../projectVerstka/assets/images/header/arrow.svg");
             transition: 0.3s ease transform;
         }
         
         &.opened &__arrow {
-            background-image: url("../assets/images/header/arrow-red.svg");
+            background-image: url("../projectVerstka/assets/images/header/arrow-red.svg");
             transform: rotate(180deg);
         }
 
@@ -270,19 +270,19 @@ a {
 
     &__first {
         height: 100vh;
-        background-image: url(/assets/images/footer/background/mobile_back.png);
+        background-image: url(../projectVerstka/assets/images/footer/background/mobile_back.png);
         background-size: cover;
 
         @media screen and (min-width: 1340px) {
-            background-image: url(/assets/images/footer/background/medium_back.png);
+            background-image: url(../projectVerstka/assets/images/footer/background/medium_back.png);
         }
 
         @media screen and (min-width: 1910px) {
-            background-image: url(/assets/images/footer/background/large_widht_back.png);
+            background-image: url(../projectVerstka/assets/images/footer/background/large_widht_back.png);
         }
 
         @media screen and (min-width: 3800px) {
-            background-image: url(/assets/images/footer/background/xlarge_back.png);
+            background-image: url(../projectVerstka/assets/images/footer/background/xlarge_back.png);
         }
 
         &__content {
@@ -730,7 +730,7 @@ a {
     &__first {
         height: 100vh;
         min-height: 600px;
-        background-image: url('assets/images/main/first/back1.png');
+        background-image: url('../projectVerstka/assets/images/main/first/back1.png');
         background-size: cover;
         overflow-x: hidden;
 
@@ -842,16 +842,16 @@ a {
                 }
 
                 &:nth-child(1) {
-                    background-image: url(assets/images/main/first/c1.png);
+                    background-image: url(../projectVerstka/assets/images/main/first/c1.png);
                 }
                 &:nth-child(2) {
-                    background-image: url(assets/images/main/first/c2.png);
+                    background-image: url(../projectVerstka/assets/images/main/first/c2.png);
                 }
                 &:nth-child(3) {
-                    background-image: url(assets/images/main/first/c3.png);
+                    background-image: url(../projectVerstka/assets/images/main/first/c3.png);
                 }
                 &:nth-child(4) {
-                    background-image: url(assets/images/main/first/c4.png);
+                    background-image: url(../projectVerstka/assets/images/main/first/c4.png);
                 }
             }
 
@@ -1392,11 +1392,11 @@ a {
 .market-page{
 
     &__first {
-        background-image: url('assets/images/market/first/back.png');
+        background-image: url('../projectVerstka/assets/images/market/first/back.png');
         background-size: cover;
 
         @media screen and (min-width: $media-medium) {
-            background-image: url('assets/images/market/first/backlarge.png');
+            background-image: url('../projectVerstka/assets/images/market/first/backlarge.png');
         }
 
         &__content {
@@ -1680,13 +1680,13 @@ a {
 .company-page {
 
     &__first {
-        background-image: url('assets/images/company/fisrt/back.png');
+        background-image: url('../projectVerstka/assets/images/company/fisrt/back.png');
         background-size: cover;
         // width: 100vw;
         height: 100vh;
 
         @media screen and (min-width: $media-medium) {
-            background-image: url('assets/images/company/fisrt/backlarge.png');
+            background-image: url('../projectVerstka/assets/images/company/fisrt/backlarge.png');
         }
 
         &__content {
@@ -2490,13 +2490,13 @@ a {
         padding-left: 1.2em;
         padding-right: 1.2em;
         padding-bottom: 8em;
-        background: url('assets/images/registration/backreg.png');
+        background: url('../projectVerstka/assets/images/registration/backreg.png');
         background-size: cover;
 
         @media screen and (min-width: $media-extra-large) {
             padding-left: calc((100% - #{480px})/2);
             padding-right: calc((100% - #{480px})/2);
-            background: url('assets/images/signin/backlarge.png');
+            background: url('../projectVerstka/assets/images/signin/backlarge.png');
             background-repeat: no-repeat;
         }
 
@@ -2630,13 +2630,13 @@ a {
         padding-left: 1.2em;
         padding-right: 1.2em;
         padding-bottom: 4em;
-        background: url('assets/images/signin/backsignin.png');
+        background: url('../projectVerstka/assets/images/signin/backsignin.png');
         background-size: cover;
 
         @media screen and (min-width: $media-extra-large) {
             padding-left: calc((100% - #{480px})/2);
             padding-right: calc((100% - #{480px})/2);
-            background: url('assets/images/signin/backlarge.png');
+            background: url('../projectVerstka/assets/images/signin/backlarge.png');
             height: 120vh;
         }
 
