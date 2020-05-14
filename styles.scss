@@ -168,12 +168,12 @@ a {
             width: 10px;
             background-repeat: no-repeat;
             height: 5px;
-            background-image: url("../projectVerstka/assets/images/header/arrow.svg");
+            background-image: url("../delion/assets/images/header/arrow.svg");
             transition: 0.3s ease transform;
         }
         
         &.opened &__arrow {
-            background-image: url("../projectVerstka/assets/images/header/arrow-red.svg");
+            background-image: url("../delion/assets/images/header/arrow-red.svg");
             transform: rotate(180deg);
         }
 
@@ -231,21 +231,24 @@ a {
                 width: 104px;
                 border-radius: 1.3rem;
                 margin-right: 20px;
+                font-size: 12px;
+                font-weight: 500;
+
+                svg {
+                    width: 11px;
+                    height: 13px;
+                    fill: currentColor;
+                    stroke: currentColor;
+                }
 
                 @media screen and (min-width: $media-large) {
                     border: none;
                     height: 40px;
+                    font-size: 14px;
                     
                     &:hover{
                         cursor: pointer;
-                    };
-                }
-
-                img {
-                    margin-right: 4px;
-
-                    @media screen and (min-width: $media-large) {
-                        margin-right: 10px;
+                        color: #F41112;
                     }
                 }
             }
@@ -270,19 +273,19 @@ a {
 
     &__first {
         height: 100vh;
-        background-image: url(../projectVerstka/assets/images/footer/background/mobile_back.png);
+        background-image: url(../delion/assets/images/footer/background/mobile_back.png);
         background-size: cover;
 
         @media screen and (min-width: 1340px) {
-            background-image: url(../projectVerstka/assets/images/footer/background/medium_back.png);
+            background-image: url(../delion/assets/images/footer/background/medium_back.png);
         }
 
         @media screen and (min-width: 1910px) {
-            background-image: url(../projectVerstka/assets/images/footer/background/large_widht_back.png);
+            background-image: url(../delion/assets/images/footer/background/large_widht_back.png);
         }
 
         @media screen and (min-width: 3800px) {
-            background-image: url(../projectVerstka/assets/images/footer/background/xlarge_back.png);
+            background-image: url(../delion/assets/images/footer/background/xlarge_back.png);
         }
 
         &__content {
@@ -729,13 +732,15 @@ a {
 
     &__first {
         height: 100vh;
-        min-height: 600px;
-        background-image: url('../projectVerstka/assets/images/main/first/back1.png');
+        min-height: 700px;
+        background-image: url('../delion/assets/images/main/first/back1.png');
         background-size: cover;
         overflow-x: hidden;
 
         @media screen and (min-width: $media-extra-large) {
-            min-height: 850px;
+            // min-height: 850px;
+            height: 100vh;
+            min-height: 888px;
         }
 
         &__content {
@@ -788,19 +793,24 @@ a {
         }
 
         &__controller {
-            left: 0;
-            position: absolute;
-            bottom: 50px;
-            width: 375px;
+            left: 50%;
+            margin-left: calc(345px/2);
+            // position: absolute;
+            bottom: -10px;
+            width: 345px;
             height: 100px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            // position: absolute;
+            margin: 60px auto 0;
             // bottom: -200px;
             // width: 375px;
 
             @media screen and (min-width: $media-large) {
+                margin-top: 80px;
+                margin-left: 0;
+                left: 0;
+                bottom: -120px;
                 width: 370px;
                 padding-left: 1.2em;
                 box-sizing: content-box;
@@ -842,21 +852,21 @@ a {
                 }
 
                 &:nth-child(1) {
-                    background-image: url(../projectVerstka/assets/images/main/first/c1.png);
+                    background-image: url(../delion/assets/images/main/first/c1.png);
                 }
                 &:nth-child(2) {
-                    background-image: url(../projectVerstka/assets/images/main/first/c2.png);
+                    background-image: url(../delion/assets/images/main/first/c2.png);
                 }
                 &:nth-child(3) {
-                    background-image: url(../projectVerstka/assets/images/main/first/c3.png);
+                    background-image: url(../delion/assets/images/main/first/c3.png);
                 }
                 &:nth-child(4) {
-                    background-image: url(../projectVerstka/assets/images/main/first/c4.png);
+                    background-image: url(../delion/assets/images/main/first/c4.png);
                 }
             }
 
             .swiper-pagination-bullet + .swiper-pagination-bullet {
-                margin-left: 1em;
+                margin-left: 0.7em;
             }
 
             .banner-swiper-button-prev, .banner-swiper-button-next {
@@ -1330,6 +1340,11 @@ a {
                             width: 296px;
                             margin: auto;
 
+                            @media screen and (min-width: $media-extra-large) {
+                                width: 210px;
+                            }
+        
+
                         }
 
                         &__lists {
@@ -1371,6 +1386,7 @@ a {
                             border-bottom: 1px solid #F3F3F3;
                             padding-top: 5px;
                             padding-bottom: 18px;
+
                             div {
                                 padding-left: 18px;
                                 padding-right: 18px;
@@ -1392,11 +1408,11 @@ a {
 .market-page{
 
     &__first {
-        background-image: url('../projectVerstka/assets/images/market/first/back.png');
+        background-image: url('../delion/assets/images/market/first/back.png');
         background-size: cover;
 
         @media screen and (min-width: $media-medium) {
-            background-image: url('../projectVerstka/assets/images/market/first/backlarge.png');
+            background-image: url('../delion/assets/images/market/first/backlarge.png');
         }
 
         &__content {
@@ -1603,7 +1619,9 @@ a {
 
                 .tab {
                     padding: 1em 1.3em;
-                    border-radius: 10px;
+                    border-top-left-radius: 10px;
+                    border-top-right-radius: 10px;
+                    // border-radius: 10px;
                 }
             }
 
@@ -1620,8 +1638,14 @@ a {
             &__table {
                 width: 100%;
                 background-color: $stylest-color;
-                border-radius: 10px;
+                border-bottom-left-radius: 10px;
+                border-bottom-right-radius: 10px;
+                // border-radius: 10px;
                 padding-bottom: 2em;
+
+                .dataTable.no-footer {
+                    margin: 0 !important;
+                }
                 
                 &__information {
                     padding: 1em;
@@ -1677,16 +1701,26 @@ a {
     }
 }
 
+.dataTables_scrollHeadInner {
+
+    @media screen and (min-width: $media-extra-large) {
+        width: 1112px !important; 
+    }
+}
+
 .company-page {
 
     &__first {
-        background-image: url('../projectVerstka/assets/images/company/fisrt/back.png');
+        background-image: url('../delion/assets/images/company/fisrt/back.png');
         background-size: cover;
         // width: 100vw;
         height: 100vh;
+        max-height: 800px;
+        min-height: 700px;
+        position: relative;
 
         @media screen and (min-width: $media-medium) {
-            background-image: url('../projectVerstka/assets/images/company/fisrt/backlarge.png');
+            background-image: url('../delion/assets/images/company/fisrt/backlarge.png');
         }
 
         &__content {
@@ -1743,13 +1777,13 @@ a {
 
         &__achievements {
             width: 335px;
-            height: 378px;
+            height: 398px;
             background-color: $stylest-color;
             border-radius: 15px;
             position: absolute;
             left: 0;
             right: 0;
-            bottom: -190px;
+            bottom: -195px;
             margin: 0 auto;
             padding-top: 10px;
 
@@ -1951,7 +1985,7 @@ a {
                     // padding-right: 0.5em;
                     background-color: $stylest-color;
                     width: 335px;
-                    height: 268px;
+                    height: 285px;
                     border-radius: 15px;
                     margin-bottom: 2em;
 
@@ -2263,6 +2297,7 @@ a {
         // padding-left: 1.2em;
         // padding-right: 1.2em;
         background-size: cover;
+        min-height: 550px;
 
         &__content {
             display: flex;
@@ -2490,13 +2525,13 @@ a {
         padding-left: 1.2em;
         padding-right: 1.2em;
         padding-bottom: 8em;
-        background: url('../projectVerstka/assets/images/registration/backreg.png');
+        background: url('../delion/assets/images/registration/backreg.png');
         background-size: cover;
 
         @media screen and (min-width: $media-extra-large) {
             padding-left: calc((100% - #{480px})/2);
             padding-right: calc((100% - #{480px})/2);
-            background: url('../projectVerstka/assets/images/signin/backlarge.png');
+            background: url('../delion/assets/images/signin/backlarge.png');
             background-repeat: no-repeat;
         }
 
@@ -2630,13 +2665,13 @@ a {
         padding-left: 1.2em;
         padding-right: 1.2em;
         padding-bottom: 4em;
-        background: url('../projectVerstka/assets/images/signin/backsignin.png');
+        background: url('../delion/assets/images/signin/backsignin.png');
         background-size: cover;
 
         @media screen and (min-width: $media-extra-large) {
             padding-left: calc((100% - #{480px})/2);
             padding-right: calc((100% - #{480px})/2);
-            background: url('../projectVerstka/assets/images/signin/backlarge.png');
+            background: url('../delion/assets/images/signin/backlarge.png');
             height: 120vh;
         }
 

@@ -53,7 +53,7 @@ id,Позиция,Готовый текст
 462,,Effet de levier
 463,,1:500
 464,,L'exécution immédiate
-465,,Le commerce de криптовалютами
+465,,Le commerce de crypto-monnaies
 466,,Assurance-dépôts
 47,Аккаунт №3,Platinum
 48,Подзаголовок для аккаунта №3,"Le statut particulier, l'ouverture de nouveaux privilèges pour les traders expérimentés"
@@ -62,7 +62,7 @@ id,Позиция,Готовый текст
 492,,Effet de levier
 493,,1:500
 494,,L'exécution immédiate
-495,,Le commerce de криптовалютами
+495,,Le commerce de crypto-monnaies
 496,,Assurance-dépôts
 497,,Protection des dépôts
 498,,Réception d'un soutien personnalisé
@@ -89,7 +89,7 @@ Copyright © 2017 - 2020 Delion. Tous droits réservés
 54,Общий заголовок,Fournissons proximité immédiate infiniment de négocier sur les célèbres marchés financiers
 55,Заголовок №1,Les paires de devises
 56,Описание к заголовку №1,Le plus liquide du marché qui offre la possibilité de faire un profit sur la variation des taux de change
-57,Заголовок №2,Криптовалюта
+57,Заголовок №2,Crypto-monnaie
 58,Описание к заголовку №2,"L'ouverture de nouvelles possibilités de négociation des волантильными monnaies comme Bitcoin, Ethereum, Litecoin, Ripple"
 59,Заголовок №3,CFD sur actions
 60,Описание к заголовку №3,"En appliquant une expérience personnelle, réalisez des métiers est un des leaders du marché"
@@ -104,7 +104,7 @@ Copyright © 2017 - 2020 Delion. Tous droits réservés
 6501,,300 000
 6502,,Ouvert des comptes commerciaux
 6503,,Environ
-6504,,2 millions
+6504,,2 mln
 6505,,D'opérations commerciales de tous les jours
 6506,,plus de
 6507,,4 ans
@@ -113,11 +113,11 @@ Copyright © 2017 - 2020 Delion. Tous droits réservés
 6510,,120
 6511,,Outils de négociation
 6512,,Quotidien
-6513,,50 millions $
+6513,,$50 mln
 6514,,Le volume des échanges d'environ 
 "4.3.2. Вы в центре всего, что мы делаем",,
 66,Заголовок,Une optimisation des conditions commerciales pour atteindre la fonctionnalité et la commodité pour les commerçants
-67,Подзаголовок,"Objectif principal est d'offrir la possibilité aux traders de faire des analyses et des prévisions du marché, d'exercer les métiers et les упешно encaissements"
+67,Подзаголовок,"Objectif principal est d'offrir la possibilité aux traders de faire des analyses et des prévisions du marché, d'exercer les métiers et les bien encaissements"
 4.3.3. Цели и задачи компании,,
 68,Общий заголовок,Les principaux objectifs de Delion
 69,Заголовок №1,Donner à chaque trader de meilleures conditions commerciales
@@ -214,3 +214,24 @@ Copyright © 2017 - 2020 Delion. Tous droits réservés
 146,,Pourquoi Delion
 147,,Des avantages supplémentaires
 148,,Trois étapes pour commencer à trader
+149,,Forex
+150,,Outil
+151,,Min changement de prix
+152,,Lot standard
+153,,Min la taille du lot
+154,,Max. la taille du lot
+155,,Étape de modification du volume par lots
+156,,Max. épaule
+157,,Ouverture*
+158,,Fermeture *
+159,,Les métaux
+160,,Gros titre
+161,,Stocks
+162,,Pays
+163,,Devis Devises
+164,,Nombre de contrats pour 1 lot
+165,,Matières premières
+166,,Pas de volume
+167,,ETF
+168,,CRYPTO
+169,,INDICE
