@@ -22,16 +22,6 @@ document.querySelector('.menu__burger').addEventListener('click', function(e) {
   }
 });
 
-if (document.querySelector('.header__language')!=null) {
-  document.querySelector('.header__language').addEventListener('click', function(e) {
-    e.currentTarget.classList.toggle('opened');
-  });
-}
-else {
-  document.querySelector('.header__language-hidden').addEventListener('click', function(e) {
-    e.currentTarget.classList.toggle('opened');
-  });
-}
-
-
-
+document.querySelector('.header__language-hidden').addEventListener('click', function(e) {
+  e.currentTarget.classList.toggle('opened');
+});
