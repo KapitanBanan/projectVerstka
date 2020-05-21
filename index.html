@@ -586,7 +586,7 @@
             Httpreq.send(null);
             return Httpreq.responseText;          
         }
-        var response = Get('../rssrequest.php' + lang);
+        var response = Get('../rssrequest.php' + "?lang=" + lang);
         var data = JSON.parse(response);
         var i = 0;
         while (i < 9) {
