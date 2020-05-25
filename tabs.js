@@ -7,5 +7,11 @@ for (const tab of tabs) {
         event.target.classList.add('active');
         document.querySelector('.tab-info.active').classList.remove('active');
         document.querySelector(`.tab-info[data-id="${dataID}"]`).classList.add('active');
+
+        var table = document.querySelector('table');
+        if(table != null){
+          
+          $("table").DataTable().columns.adjust();
+        }
   })
 }

@@ -399,6 +399,13 @@ a {
         height: 100vh;
         background-image: url(../delion/assets/images/footer/background/mobile_back.png);
         background-size: cover;
+        padding-left: 1.2em;
+        padding-right: 1.2em;
+
+        @media screen and (min-width: 1200px) {
+            padding-left: calc((100% - 1140px)/2);
+            padding-right: calc((100% - 1140px)/2);
+        }
 
         @media screen and (min-width: 1340px) {
             height: 500px;
@@ -406,10 +413,13 @@ a {
         }
 
         @media screen and (min-width: 1910px) {
-            background-image: url(../delion/assets/images/footer/background/large_widht_back.png);
+            background-image: url(../delion/assets/images/footer/background/large_width_back.png);
         }
 
         @media screen and (min-width: 3800px) {
+            padding-left: calc((100% - 2300px)/2);
+            padding-right: calc((100% - 2300px)/2);
+            height: 1000px;
             background-image: url(../delion/assets/images/footer/background/xlarge_back.png);
         }
 
@@ -935,7 +945,7 @@ a {
 .main-page {
 
     &__first {
-        height: 100vh;
+        // height: 100vh;
         min-height: 700px;
         background-image: url('../delion/assets/images/main/first/back1.png');
         background-size: cover;
@@ -943,7 +953,7 @@ a {
 
         @media screen and (min-width: $media-extra-large) {
             // min-height: 850px;
-            height: 100vh;
+            // height: 100vh;
             min-height: 888px;
         }
 
@@ -1135,6 +1145,7 @@ a {
                 }
 
                 h3 {
+                    height: 50px;
                     font-size: 14px;
                     font-weight: bold;
                     padding-bottom: 12px;
@@ -1334,7 +1345,7 @@ a {
         padding-bottom: 1em;
 
         @media screen and (min-width: $media-extra-large) {
-            height: 100vh;
+            height: 700px;
         }
     
         &__content {
@@ -1846,6 +1857,26 @@ a {
                 border-bottom-right-radius: 10px;
                 // border-radius: 10px;
                 padding-bottom: 2em;
+
+                ::-webkit-scrollbar {
+                    width: 5px;
+                }
+                  
+                  /* Track */
+                ::-webkit-scrollbar-track {
+                background: $stylest-color; 
+                }
+                   
+                  /* Handle */
+                ::-webkit-scrollbar-thumb {
+                background: #F41112;
+                border-radius: 10px;
+                }
+                  
+                /* Handle on hover */
+                ::-webkit-scrollbar-thumb:hover {
+                background: #F41112; 
+                }
 
                 .dataTable.no-footer {
                     margin: 0 !important;
